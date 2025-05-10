@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">固定日历</string>
+    <string name="january">一月</string>
+    <string name="february">二月</string>
+    <string name="march">三月</string>
+    <string name="april">四月</string>
+    <string name="may">五月</string>
+    <string name="june">六月</string>
+    <string name="sol">索尔</string>
+    <string name="july">七月</string>
+    <string name="august">八月</string>
+    <string name="september">九月</string>
+    <string name="october">十月</string>
+    <string name="november">十一月</string>
+    <string name="december">十二月</string>
+    <string name="date">日期</string>
+    <string name="info">点击月份</string>
+    <string name="gregorian_calendar">公历</string>
+    <string name="international_fixed_calendar">国际固定日历</string>
+    <string name="sol_description">索尔月是位于年中间的特殊月份。</string>
+    <string name="info_top">信息</string>
+    <string name="settings_top">设置</string>
+    <string name="about">关于</string>
+    <string name="back">返回</string>
+    <string name="info_title">什么是国际固定日历？</string>
+    <string name="info_desc">国际固定日历（IFC）是一个由13个月组成的日历系统，每个月恰好有28天。与传统的公历不同，该系统具有更一致和可预测的结构。</string>
+    <string name="feaute_title">IFC的特点</string>
+    <string name="feature_desc">"\n                    • 13个月，每月28天\n                    • 每个月从星期日开始，星期六结束\n                    • 闰年增加一个“闰日”\n                    • 年末增加一个“年日”\n                    • 每个月的日期与星期几固定对应\n                "</string>
+    <string name="months_title">IFC月份名称</string>
+    <string name="months_desc">"\n                    1. 一月\n                    2. 二月\n                    3. 三月\n                    4. 四月\n                    5. 五月\n                    6. 六月\n                    7. 索尔\n                    8. 七月\n                    9. 八月\n                    10. 九月\n                    11. 十月\n                    12. 十一月\n                    13. 十二月\n                "</string>
+    <string name="advantages_title">优势</string>
+    <string name="advantages_desc">"\n                    • 便于计划和组织\n                    • 每月长度相同，计算更简单\n                    • 每个月的日期与星期几固定对应\n                    • 商业和金融操作更一致\n                    • 具有国际标准化的潜力\n                "</string>
+    <string name="history_title">历史</string>
+    <string name="history_desc">国际固定日历由摩西·B·科茨沃思于1902年提出。柯达公司在1928年至1989年期间使用了该日历。如今，仍有一些组织和个人在使用它。</string>
+    <string name="year_day">年日</string>
+    <string name="dark_mode">深色模式</string>
+    <string name="special_theme">特殊主题</string>
+    <string name="theme_color">主题颜色</string>
+    <string name="language">语言</string>
+    <string name="calendar">固定日历</string>
+    <string name="version">版本</string>
+    <string name="select_theme_color">选择主题颜色</string>
+    <string name="okay">确定</string>
+    <string name="cancel">取消</string>
+
+</resources>

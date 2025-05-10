@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fixed Calendar</string>
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="sol">Sol</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+    <string name="date">Date</string>
+    <string name="info">click on month</string>
+    <string name="gregorian_calendar">Gregorian Calendar</string>
+    <string name="international_fixed_calendar">International Fixed Calendar</string>
+    <string name="sol_description">The month of Sol is a special month located in the middle of the year.</string>
+    <string name="info_top">Information</string>
+    <string name="settings_top">Settings</string>
+    <string name="about">About</string>
+    <string name="back">Back</string>
+    <string name="info_title">What is the International Fixed Calendar?</string>
+    <string name="info_desc">The International Fixed Calendar (IFC) is a calendar system consisting of 13 months, each with exactly 28 days. Unlike the traditional Gregorian calendar, this system has a more consistent and predictable structure.</string>
+    <string name="feaute_title">Features of the IFC</string>
+    <string name="feature_desc">"\n                    • 13 months, each with 28 days\n                    • Each month starts and ends on the same day\n                    • In leap years, a 'Leap Day' is added\n                    • A 'Year Day' is added at the end of the year\n                    • Days of the week repeat on the same dates each month\n                "</string>
+    <string name="months_title">IFC Month Names</string>
+    <string name="months_desc">"\n                    1. January\n                    2. February\n                    3. March\n                    4. April\n                    5. May\n                    6. June\n                    7. Sol\n                    8. July\n                    9. August\n                    10. September\n                    11. October\n                    12. November\n                    13. December\n                "</string>
+    <string name="advantages_title">Advantages</string>
+    <string name="advantages_desc">"\n                    • Easier planning and organization\n                    • Simplified calculations due to equal month lengths\n                    • Days of the week repeat on the same dates each month\n                    • More consistent structure for commercial and financial operations\n                    • Potential for international standardization\n                "</string>
+    <string name="history_title">History</string>
+    <string name="history_desc">The International Fixed Calendar was proposed in 1902 by Moses B. Cotsworth. The Kodak company used this calendar between 1928 and 1989. It is still used by some organizations and individuals today.</string>
+    <string name="year_day">Year Day</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="special_theme">Special Theme</string>
+    <string name="theme_color">Theme Color</string>
+    <string name="language">Language</string>
+    <string name="calendar">Fixed Calendar</string>
+    <string name="version">Version</string>
+    <string name="select_theme_color">Select Theme Color</string>
+    <string name="okay">Okay</string>
+    <string name="cancel">Cancel</string>
+
+</resources>

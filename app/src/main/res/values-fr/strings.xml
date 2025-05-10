@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calendrier Fixe</string>
+    <string name="january">Janvier</string>
+    <string name="february">Février</string>
+    <string name="march">Mars</string>
+    <string name="april">Avril</string>
+    <string name="may">Mai</string>
+    <string name="june">Juin</string>
+    <string name="sol">Sol</string>
+    <string name="july">Juillet</string>
+    <string name="august">Août</string>
+    <string name="september">Septembre</string>
+    <string name="october">Octobre</string>
+    <string name="november">Novembre</string>
+    <string name="december">Décembre</string>
+    <string name="date">Date</string>
+    <string name="info">cliquez sur le mois</string>
+    <string name="gregorian_calendar">Calendrier Grégorien</string>
+    <string name="international_fixed_calendar">Calendrier Fixe International</string>
+    <string name="sol_description">Le mois de Sol est un mois spécial situé au milieu de l\'année.</string>
+    <string name="year_day_description">Le Jour de l\'année est le dernier jour de l\'année.</string>
+    <string name="month_default_description">mois se compose de 28 jours.</string>
+    <string name="info_top">Information</string>
+    <string name="settings_top">Paramètres</string>
+    <string name="about">À propos</string>
+    <string name="back">Retour</string>
+    <string name="info_title">Qu\'est-ce que le Calendrier Fixe International ?</string>
+    <string name="info_desc">Le Calendrier Fixe International (CFI) est un système calendaire composé de 13 mois, chacun contenant exactement 28 jours. Contrairement au calendrier grégorien traditionnel, ce système offre une structure plus cohérente et prévisible.</string>
+    <string name="feaute_title">Caractéristiques du CFI</string>
+    <string name="feature_desc">"\n                    • 13 mois, chacun de 28 jours\n                    • Chaque mois commence et se termine le même jour de la semaine\n                    • Une 'Journée Bissextile' est ajoutée les années bissextiles\n                    • Une 'Journée de l'Année' est ajoutée à la fin de l'année\n                    • Les jours de la semaine se répètent aux mêmes dates chaque mois\n                "</string>
+    <string name="months_title">Noms des Mois du CFI</string>
+    <string name="months_desc">"\n                    1. Janvier\n                    2. Février\n                    3. Mars\n                    4. Avril\n                    5. Mai\n                    6. Juin\n                    7. Sol\n                    8. Juillet\n                    9. Août\n                    10. Septembre\n                    11. Octobre\n                    12. Novembre\n                    13. Décembre\n                "</string>
+    <string name="advantages_title">Avantages</string>
+    <string name="advantages_desc">"\n                    • Facilité de planification et d'organisation\n                    • Calculs simplifiés grâce à la longueur uniforme des mois\n                    • Les jours de la semaine se répètent aux mêmes dates chaque mois\n                    • Structure plus cohérente pour les opérations commerciales et financières\n                    • Potentiel de standardisation internationale\n                "</string>
+    <string name="history_title">Historique</string>
+    <string name="history_desc">Le Calendrier Fixe International a été proposé en 1902 par Moses B. Cotsworth. La société Kodak a utilisé ce calendrier entre 1928 et 1989. Aujourd\'hui, il est encore utilisé par certaines organisations et individus.</string>
+    <string name="year_day">Jour de l\'année</string>
+    <string name="dark_mode">Mode sombre</string>
+    <string name="special_theme">Thème spécial</string>
+    <string name="theme_color">Couleur du thème</string>
+    <string name="language">Langue</string>
+    <string name="calendar">Calendrier fixe</string>
+    <string name="version">Version</string>
+    <string name="select_theme_color">Sélectionner la couleur du thème</string>
+    <string name="okay">OK</string>
+    <string name="cancel">Annuler</string>
+
+</resources>

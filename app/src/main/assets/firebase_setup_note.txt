@@ -1,0 +1,19 @@
+ÖNEMLİ: Firebase Kurulumu Tamamlama Adımları
+
+1. Firebase Console'a gidin: https://console.firebase.google.com/
+2. Yeni bir proje oluşturun (veya mevcut projenizi seçin)
+3. "Add app" -> "Android" seçin
+4. Android paket adını girin: com.bysoftware.fixedcalendar
+5. Firebase Assistant'ı takip edin ve google-services.json dosyasını indirin
+6. İndirilen google-services.json dosyasını app/ klasörüne kopyalayın
+
+Remote Config için:
+1. Firebase Console'da "Remote Config" menüsüne gidin
+2. Aşağıdaki parametreleri ekleyin:
+   - force_update_required (Boolean): false
+   - force_update_current_version (Number): mevcut sürüm numaranız
+   - force_update_store_url (String): https://play.google.com/store/apps/details?id=com.bysoftware.fixedcalendar
+
+Zorunlu güncellemeyi test etmek için:
+1. Firebase Console'da force_update_required'ı true olarak değiştirin
+2. force_update_current_version değerini mevcut BuildConfig.VERSION_CODE'dan büyük bir sayı olarak ayarlayın 

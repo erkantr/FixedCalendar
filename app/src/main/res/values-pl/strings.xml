@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Stały Kalendarz</string>
+    <string name="january">Styczeń</string>
+    <string name="february">Luty</string>
+    <string name="march">Marzec</string>
+    <string name="april">Kwiecień</string>
+    <string name="may">Maj</string>
+    <string name="june">Czerwiec</string>
+    <string name="sol">Sol</string>
+    <string name="july">Lipiec</string>
+    <string name="august">Sierpień</string>
+    <string name="september">Wrzesień</string>
+    <string name="october">Październik</string>
+    <string name="november">Listopad</string>
+    <string name="december">Grudzień</string>
+    <string name="date">Data</string>
+    <string name="info">kliknij na miesiąc</string>
+    <string name="gregorian_calendar">Kalendarz gregoriański</string>
+    <string name="international_fixed_calendar">Międzynarodowy Stały Kalendarz</string>
+    <string name="sol_description">Miesiąc Sol to specjalny miesiąc znajdujący się w środku roku.</string>
+    <string name="year_day_description">Dzień Roku to ostatni dzień roku.</string>
+    <string name="month_default_description">miesiąc składa się z 28 dni.</string>
+    <string name="info_top">Informacje</string>
+    <string name="settings_top">Ustawienia</string>
+    <string name="about">O aplikacji</string>
+    <string name="back">Wstecz</string>
+    <string name="info_title">Czym jest Międzynarodowy Stały Kalendarz?</string>
+    <string name="info_desc">Międzynarodowy Stały Kalendarz (MSK) to system kalendarzowy składający się z 13 miesięcy, z których każdy ma dokładnie 28 dni. W przeciwieństwie do tradycyjnego kalendarza gregoriańskiego, ten system charakteryzuje się bardziej spójną i przewidywalną strukturą.</string>
+    <string name="feaute_title">Cechy MSK</string>
+    <string name="feature_desc">"\n                    • 13 miesięcy, każdy po 28 dni\n                    • Każdy miesiąc zaczyna się i kończy tego samego dnia tygodnia\n                    • W latach przestępnych dodawany jest 'Dzień Przestępny'\n                    • Na końcu roku dodawany jest 'Dzień Roku'\n                    • Dni tygodnia powtarzają się w tych samych datach każdego miesiąca\n                "</string>
+    <string name="months_title">Nazwy miesięcy MSK</string>
+    <string name="months_desc">"\n                    1. Styczeń\n                    2. Luty\n                    3. Marzec\n                    4. Kwiecień\n                    5. Maj\n                    6. Czerwiec\n                    7. Sol\n                    8. Lipiec\n                    9. Sierpień\n                    10. Wrzesień\n                    11. Październik\n                    12. Listopad\n                    13. Grudzień\n                "</string>
+    <string name="advantages_title">Zalety</string>
+    <string name="advantages_desc">"\n                    • Łatwość planowania i organizacji\n                    • Prostota obliczeń dzięki jednakowej długości miesięcy\n                    • Dni tygodnia powtarzają się w tych samych datach każdego miesiąca\n                    • Bardziej spójna struktura dla operacji handlowych i finansowych\n                    • Potencjał do międzynarodowej standaryzacji\n                "</string>
+    <string name="history_title">Historia</string>
+    <string name="history_desc">Międzynarodowy Stały Kalendarz został zaproponowany w 1902 roku przez Mosesa B. Cotswortha. Firma Kodak używała tego kalendarza w latach 1928–1989. Obecnie jest nadal stosowany przez niektóre organizacje i osoby prywatne.</string>
+    <string name="year_day">Dzień Roku</string>
+    <string name="dark_mode">Tryb Ciemny</string>
+    <string name="special_theme">Motyw Specjalny</string>
+    <string name="theme_color">Kolor Motywu</string>
+    <string name="language">Język</string>
+    <string name="calendar">Stały Kalendarz</string>
+    <string name="version">Wersja</string>
+    <string name="select_theme_color">Wybierz Kolor Motywu</string>
+    <string name="okay">OK</string>
+    <string name="cancel">Anuluj</string>
+
+</resources>

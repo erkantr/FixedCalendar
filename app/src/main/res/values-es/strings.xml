@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calendario Fijo</string>
+    <string name="january">Enero</string>
+    <string name="february">Febrero</string>
+    <string name="march">Marzo</string>
+    <string name="april">Abril</string>
+    <string name="may">Mayo</string>
+    <string name="june">Junio</string>
+    <string name="sol">Sol</string>
+    <string name="july">Julio</string>
+    <string name="august">Agosto</string>
+    <string name="september">Septiembre</string>
+    <string name="october">Octubre</string>
+    <string name="november">Noviembre</string>
+    <string name="december">Diciembre</string>
+    <string name="date">Fecha</string>
+    <string name="info">toca el mes</string>
+    <string name="gregorian_calendar">Calendario Gregoriano</string>
+    <string name="international_fixed_calendar">Calendario Fijo Internacional</string>
+    <string name="sol_description">El mes de Sol es un mes especial ubicado en mitad del año.</string>
+    <string name="info_top">Información</string>
+    <string name="settings_top">Configuración</string>
+    <string name="about">Acerca de</string>
+    <string name="back">Atrás</string>
+    <string name="info_title">¿Qué es el Calendario Fijo Internacional?</string>
+    <string name="info_desc">El Calendario Fijo Internacional (CFI) es un sistema de calendario que consta de 13 meses, cada uno con exactamente 28 días. A diferencia del calendario gregoriano tradicional, este sistema presenta una estructura más coherente y predecible.</string>
+    <string name="feaute_title">Características del CFI</string>
+    <string name="feature_desc">"\n                    • 13 meses, cada uno con 28 días\n                    • Cada mes comienza y termina en el mismo día de la semana\n                    • Se agrega un 'Día Bisiesto' en años bisiestos\n                    • Se agrega un 'Día del Año' al final del año\n                    • Los días de la semana se repiten en las mismas fechas cada mes\n                "</string>
+    <string name="months_title">Nombres de los meses del CFI</string>
+    <string name="months_desc">"\n                    1. Enero\n                    2. Febrero\n                    3. Marzo\n                    4. Abril\n                    5. Mayo\n                    6. Junio\n                    7. Sol\n                    8. Julio\n                    9. Agosto\n                    10. Septiembre\n                    11. Octubre\n                    12. Noviembre\n                    13. Diciembre\n                "</string>
+    <string name="advantages_title">Ventajas</string>
+    <string name="advantages_desc">"\n                    • Facilidad de planificación y organización\n                    • Simplicidad en cálculos debido a la uniformidad en la duración de los meses\n                    • Los días de la semana se repiten en las mismas fechas cada mes\n                    • Estructura más coherente para operaciones comerciales y financieras\n                    • Potencial para estandarización internacional\n                "</string>
+    <string name="history_title">Historia</string>
+    <string name="history_desc">El Calendario Fijo Internacional fue propuesto en 1902 por Moses B. Cotsworth. La empresa Kodak lo utilizó entre 1928 y 1989. Todavía lo usan algunas organizaciones y personas hoy en día.</string>
+    <string name="year_day">Día del año</string>
+    <string name="dark_mode">Modo oscuro</string>
+    <string name="special_theme">Tema especial</string>
+    <string name="theme_color">Color del tema</string>
+    <string name="language">Idioma</string>
+    <string name="calendar">Calendario fijo</string>
+    <string name="version">Versión</string>
+    <string name="select_theme_color">Seleccionar color del tema</string>
+    <string name="okay">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="year_day_description">El Día del año es el último día del año.</string>
+    <string name="month_default_description">mes consta de 28 días.</string>
+
+</resources>

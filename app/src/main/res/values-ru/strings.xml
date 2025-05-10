@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Фиксированный календарь</string>
+    <string name="january">Январь</string>
+    <string name="february">Февраль</string>
+    <string name="march">Март</string>
+    <string name="april">Апрель</string>
+    <string name="may">Май</string>
+    <string name="june">Июнь</string>
+    <string name="sol">Соль</string>
+    <string name="july">Июль</string>
+    <string name="august">Август</string>
+    <string name="september">Сентябрь</string>
+    <string name="october">Октябрь</string>
+    <string name="november">Ноябрь</string>
+    <string name="december">Декабрь</string>
+    <string name="date">Дата</string>
+    <string name="info">нажмите на месяц</string>
+    <string name="gregorian_calendar">Григорианский календарь</string>
+    <string name="international_fixed_calendar">Международный фиксированный календарь</string>
+    <string name="sol_description">Месяц Соль — это особый месяц, расположенный в середине года.</string>
+    <string name="info_top">Информация</string>
+    <string name="settings_top">Настройки</string>
+    <string name="about">О программе</string>
+    <string name="back">Назад</string>
+    <string name="info_title">Что такое Международный фиксированный календарь?</string>
+    <string name="info_desc">Международный фиксированный календарь (IFC) — это система календаря, состоящая из 13 месяцев, каждый из которых содержит ровно 28 дней. В отличие от традиционного григорианского календаря, эта система имеет более последовательную и предсказуемую структуру.</string>
+    <string name="feaute_title">Особенности IFC</string>
+    <string name="feature_desc">"\n                    • 13 месяцев, каждый по 28 дней\n                    • Каждый месяц начинается в воскресенье и заканчивается в субботу\n                    • В високосные годы добавляется «високосный день»\n                    • В конце года добавляется «день года»\n                    • Дни недели повторяются на тех же датах каждый месяц\n                "</string>
+    <string name="months_title">Названия месяцев IFC</string>
+    <string name="months_desc">"\n                    1. Январь\n                    2. Февраль\n                    3. Март\n                    4. Апрель\n                    5. Май\n                    6. Июнь\n                    7. Соль\n                    8. Июль\n                    9. Август\n                    10. Сентябрь\n                    11. Октябрь\n                    12. Ноябрь\n                    13. Декабрь\n                "</string>
+    <string name="advantages_title">Преимущества</string>
+    <string name="advantages_desc">"\n                    • Упрощение планирования и организации\n                    • Упрощенные расчеты благодаря одинаковой длине месяцев\n                    • Дни недели повторяются на тех же датах каждый месяц\n                    • Более последовательная структура для коммерческих и финансовых операций\n                    • Потенциал для международной стандартизации\n                "</string>
+    <string name="history_title">История</string>
+    <string name="history_desc">Международный фиксированный календарь был предложен Моисеем Б. Котсвортом в 1902 году. Компания Kodak использовала этот календарь с 1928 по 1989 год. Сегодня он все еще используется некоторыми организациями и отдельными людьми.</string>
+    <string name="year_day">День Года</string>
+    <string name="dark_mode">Темный Режим</string>
+    <string name="special_theme">Специальная Тема</string>
+    <string name="theme_color">Цвет Темы</string>
+    <string name="language">Язык</string>
+    <string name="calendar">Фиксированный Календарь</string>
+    <string name="version">Версия</string>
+    <string name="select_theme_color">Выбрать Цвет Темы</string>
+    <string name="okay">ОК</string>
+    <string name="cancel">Отмена</string>
+
+</resources>

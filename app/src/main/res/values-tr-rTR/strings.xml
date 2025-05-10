@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fixed Calendar</string>
+    <string name="january">Ocak</string>
+    <string name="february">Şubat</string>
+    <string name="march">Mart</string>
+    <string name="april">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="june">Haziran</string>
+    <string name="sol">Sol</string>
+    <string name="july">Temmuz</string>
+    <string name="august">Ağustos</string>
+    <string name="september">Eylül</string>
+    <string name="october">Ekim</string>
+    <string name="november">Kasım</string>
+    <string name="december">Aralık</string>
+    <string name="date">Tarih</string>
+    <string name="info">click on month</string>
+    <string name="gregorian_calendar">Gregoryen (Miladi) Takvim</string>
+    <string name="international_fixed_calendar">Uluslararası Sabit Takvim</string>
+    <string name="sol_description">Sol ayı, yılın ortasında yer alan özel bir aydır.</string>
+    <string name="year_day_description">Yıl Günü, yılın son günüdür.</string>
+    <string name="month_default_description">ayı, 28 günden oluşur.</string>
+    <string name="info_top">Bilgi</string>
+    <string name="settings_top">Ayarlar</string>
+    <string name="about">Hakkında</string>
+    <string name="back">Geri</string>
+    <string name="info_title">International Fixed Calendar Nedir?</string>
+    <string name="info_desc">International Fixed Calendar (IFC), 13 aydan oluşan ve her ayın tam olarak 28 gün içerdiği bir takvim sistemidir. Bu takvim, geleneksel Gregoryen takviminden farklı olarak, daha tutarlı ve öngörülebilir bir yapıya sahiptir.</string>
+    <string name="feaute_title">IFC\'nin Özellikleri</string>
+    <string name="feature_desc">• 13 ay, her ay 28 gün\n• Her ay aynı günlerde başlar ve biter\n• Artık yıllarda 29 günlük bir \"Leap Day\" (Artık Gün) eklenir\n• Yıl sonunda \"Year Day\" (Yıl Sonu Günü) eklenir\n• Haftanın günleri her ay aynı tarihlerde tekrarlanır</string>
+    <string name="months_title">IFC Ay İsimleri</string>
+    <string name="months_desc">1. January\n2. February\n3. March\n4. April\n5. May\n6. June\n7. Sol\n8. July\n9. August\n10. September\n11. October\n12. November\n13. December</string>
+    <string name="advantages_title">Avantajları</string>
+    <string name="advantages_desc">• Planlama ve organizasyon kolaylığı\n• Her ay aynı uzunlukta olduğu için hesaplamalar daha basit\n• Haftanın günleri her ay aynı tarihlerde tekrarlanır\n• Ticari ve finansal işlemler için daha tutarlı bir yapı\n• Uluslararası standartlaşma potansiyeli</string>
+    <string name="history_title">Tarihçe</string>
+    <string name="history_desc">International Fixed Calendar, 1902 yılında Moses B. Cotsworth tarafından önerilmiştir. Kodak şirketi 1928-1989 yılları arasında bu takvimi kullanmıştır. Günümüzde hala bazı organizasyonlar ve bireyler tarafından kullanılmaktadır.</string>
+    <string name="year_day">Yıl Günü</string>
+    <string name="dark_mode">Karanlık Mod</string>
+    <string name="theme_color">Tema Rengi</string>
+    <string name="special_theme">Özel Tema</string>
+    <string name="language">Dil</string>
+    <string name="calendar">Sabit Takvim</string>
+    <string name="version">Versiyon</string>
+    <string name="select_theme_color">Tema Rengi Seç</string>
+    <string name="okay">Tamam</string>
+    <string name="cancel">İptal</string>
+
+</resources>

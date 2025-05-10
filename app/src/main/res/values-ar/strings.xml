@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">التقويم الثابت</string>
+    <string name="january">كانون الثاني</string>
+    <string name="february">شباط</string>
+    <string name="march">آذار</string>
+    <string name="april">نيسان</string>
+    <string name="may">أيار</string>
+    <string name="june">حزيران</string>
+    <string name="sol">سول</string>
+    <string name="july">تموز</string>
+    <string name="august">آب</string>
+    <string name="september">أيلول</string>
+    <string name="october">تشرين الأول</string>
+    <string name="november">تشرين الثاني</string>
+    <string name="december">كانون الأول</string>
+    <string name="date">التاريخ</string>
+    <string name="info">انقر على الشهر</string>
+    <string name="gregorian_calendar">التقويم الغريغوري</string>
+    <string name="international_fixed_calendar">التقويم الثابت الدولي</string>
+    <string name="sol_description">شهر سول هو شهر خاص يقع في منتصف السنة.</string>
+    <string name="info_top">معلومات</string>
+    <string name="settings_top">الإعدادات</string>
+    <string name="about">حول</string>
+    <string name="back">عودة</string>
+    <string name="info_title">ما هو التقويم الثابت الدولي؟</string>
+    <string name="info_desc">التقويم الثابت الدولي (IFC) هو نظام تقويم يتكون من 13 شهرًا، يحتوي كل منها على 28 يومًا بالضبط. على عكس التقويم الغريغوري التقليدي، يتميز هذا النظام ببنية أكثر اتساقًا وقابلية للتنبؤ.</string>
+    <string name="feaute_title">ميزات IFC</string>
+    <string name="feature_desc">"\n                    • 13 شهرًا، كل منها يحتوي على 28 يومًا\n                    • يبدأ وينتهي كل شهر في نفس يوم الأسبوع\n                    • يتم إضافة 'يوم كبيس' في السنوات الكبيسة\n                    • يتم إضافة 'يوم السنة' في نهاية السنة\n                    • تتكرر أيام الأسبوع في نفس التواريخ كل شهر\n                "</string>
+    <string name="months_title">أسماء أشهر IFC</string>
+    <string name="months_desc">"\n                    1. كانون الثاني\n                    2. شباط\n                    3. آذار\n                    4. نيسان\n                    5. أيار\n                    6. حزيران\n                    7. سول\n                    8. تموز\n                    9. آب\n                    10. أيلول\n                    11. تشرين الأول\n                    12. تشرين الثاني\n                    13. كانون الأول\n                "</string>
+    <string name="advantages_title">المزايا</string>
+    <string name="advantages_desc">"\n                    • سهولة التخطيط والتنظيم\n                    • تبسيط الحسابات بفضل طول الأشهر الموحد\n                    • تتكرر أيام الأسبوع في نفس التواريخ كل شهر\n                    • بنية أكثر اتساقًا للعمليات التجارية والمالية\n                    • إمكانية التوحيد الدولي\n                "</string>
+    <string name="history_title">التاريخ</string>
+    <string name="history_desc">تم اقتراح التقويم الثابت الدولي في عام 1902 بواسطة موسى ب. كوتسورث. استخدمت شركة كوداك هذا التقويم بين عامي 1928 و1989. لا يزال يُستخدم من قبل بعض المنظمات والأفراد حتى اليوم.</string>
+    <string name="year_day">يوم السنة</string>
+    <string name="dark_mode">الوضع الداكن</string>
+    <string name="special_theme">السمة الخاصة</string>
+    <string name="theme_color">لون السمة</string>
+    <string name="language">اللغة</string>
+    <string name="calendar">التقويم الثابت</string>
+    <string name="version">الإصدار</string>
+    <string name="select_theme_color">اختر لون السمة</string>
+    <string name="okay">موافق</string>
+    <string name="cancel">إلغاء</string>
+
+</resources>

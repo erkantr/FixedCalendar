@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "722125039072",
+    "project_id": "fixed-calendar-4dd03",
+    "storage_bucket": "fixed-calendar-4dd03.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722125039072:android:008ca4c25dc0e5e084f785",
+        "android_client_info": {
+          "package_name": "com.bysoftware.fixedcalendar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeqA9c2I70hj6N4t-q1NDfCpNU_NkfoZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
