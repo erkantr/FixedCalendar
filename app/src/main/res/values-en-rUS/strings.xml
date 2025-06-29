@@ -21,6 +21,8 @@
     <string name="sol_description">The month of Sol is a special month located in the middle of the year.</string>
     <string name="info_top">Information</string>
     <string name="settings_top">Settings</string>
+    <string name="year_day_description">Year Day is the last day of the year.</string>
+    <string name="month_default_description">month consists of 28 days.</string>
     <string name="about">About</string>
     <string name="back">Back</string>
     <string name="info_title">What is the International Fixed Calendar?</string>
@@ -44,5 +46,8 @@
     <string name="okay">Okay</string>
     <string name="cancel">Cancel</string>
 
-
+    <!-- Update Dialog Strings -->
+    <string name="update_title">New Update Available</string>
+    <string name="update_message">A new version of the app is available. You need to update to continue.</string>
+    <string name="update_button">Update</string>
 </resources>

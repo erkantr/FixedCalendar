@@ -45,6 +45,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import androidx.core.net.toUri
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -81,10 +82,10 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    Column(modifier = Modifier.fillMaxSize()) {
-
-                        AdmobBanner(modifier = Modifier.fillMaxWidth())
-
+                    Column(
+                        modifier = Modifier
+                            .fillMaxSize()
+                    ) {
                         val navController = rememberNavController()
                         NavHost(
                             navController = navController,
@@ -109,8 +110,8 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                         
-                        // XML tabanlı ad view'ı göster
-                       // XmlAdBanner(modifier = Modifier.fillMaxWidth())
+                        // Reklam en altta - status bar ile çakışmasın
+                        AdmobBanner(modifier = Modifier.fillMaxWidth())
                     }
                 }
             }
@@ -133,17 +134,17 @@ class MainActivity : ComponentActivity() {
      */
     private fun showUpdateDialog(updateUrl: String) {
         AlertDialog.Builder(this)
-            .setTitle("Yeni Güncelleme Mevcut")
-            .setMessage("Uygulamanın yeni bir sürümü mevcut. Devam etmek için güncellemelisiniz.")
+            .setTitle(getString(R.string.update_title))
+            .setMessage(getString(R.string.update_message))
             .setCancelable(false) // Kullanıcı geri tuşuna basarak kapatamasın
-            .setPositiveButton("Güncelle") { _, _ ->
+            .setPositiveButton(getString(R.string.update_button)) { _, _ ->
                 // Play Store sayfasına yönlendir
                 try {
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(updateUrl)))
+                    startActivity(Intent(Intent.ACTION_VIEW, updateUrl.toUri()))
                     finish() // Uygulamayı kapat
                 } catch (e: Exception) {
                     // Play Store uygulaması yoksa web tarayıcıdan aç
-                    startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(updateUrl)))
+                    startActivity(Intent(Intent.ACTION_VIEW, updateUrl.toUri()))
                     finish()
                 }
             }
@@ -168,11 +169,14 @@ fun AdmobBanner(modifier: Modifier = Modifier) {
         factory = { context ->
             AdView(context).apply {
                 // Adaptive Banner boyutu ekran genişliğine göre ayarlanır
-                val adSize = AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
+                /*val adSize = AdSize.getCurrentOrientationInlineAdaptiveBannerAdSize(
                     context, AdSize.FULL_WIDTH
-                )
-                setAdSize(adSize)
-                adUnitId = "ca-app-pub-3940256099942544/9214589741"
+                )*/
+
+                setAdSize(AdSize.FULL_BANNER)
+                //adUnitId = "ca-app-pub-3940256099942544/9214589741"
+                adUnitId = "ca-app-pub-3940256099942544/6300978111"
+               // adUnitId = "ca-app-pub-2803818874072639/6740291831"
                 loadAd(AdRequest.Builder().build())
             }
         }

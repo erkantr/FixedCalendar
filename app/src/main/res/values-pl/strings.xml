@@ -46,4 +46,9 @@
     <string name="okay">OK</string>
     <string name="cancel">Anuluj</string>
 
+    <!-- Update Dialog Strings -->
+    <string name="update_title">Dostępna Nowa Aktualizacja</string>
+    <string name="update_message">Dostępna jest nowa wersja aplikacji. Musisz zaktualizować, aby kontynuować.</string>
+    <string name="update_button">Aktualizuj</string>
+
 </resources>

@@ -19,6 +19,8 @@
     <string name="gregorian_calendar">Григорианский календарь</string>
     <string name="international_fixed_calendar">Международный фиксированный календарь</string>
     <string name="sol_description">Месяц Соль — это особый месяц, расположенный в середине года.</string>
+    <string name="year_day_description">День Года — это последний день года.</string>
+    <string name="month_default_description">месяц состоит из 28 дней.</string>
     <string name="info_top">Информация</string>
     <string name="settings_top">Настройки</string>
     <string name="about">О программе</string>
@@ -43,5 +45,10 @@
     <string name="select_theme_color">Выбрать Цвет Темы</string>
     <string name="okay">ОК</string>
     <string name="cancel">Отмена</string>
+
+    <!-- Update Dialog Strings -->
+    <string name="update_title">Доступно Новое Обновление</string>
+    <string name="update_message">Доступна новая версия приложения. Для продолжения необходимо обновиться.</string>
+    <string name="update_button">Обновить</string>
 
 </resources>

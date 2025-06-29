@@ -13,7 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.bysoftware.fixedcalendar"
-        minSdk 24
+        minSdk 26
         //noinspection EditedTargetSdkVersion
         targetSdk 35
         versionCode 7
@@ -72,7 +72,7 @@ android {
 
 dependencies {
     implementation 'com.google.android.gms:play-services-ads:23.0.0'
-    
+
     // Firebase için dependencies - Zorunlu güncellemeler için Remote Config kullanılıyor
     implementation platform('com.google.firebase:firebase-bom:32.8.0')
     implementation 'com.google.firebase:firebase-config-ktx:21.6.2'

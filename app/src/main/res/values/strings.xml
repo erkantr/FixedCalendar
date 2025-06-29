@@ -45,4 +45,14 @@
     <string name="select_theme_color">Select Theme Color</string>
     <string name="okay">OK</string>
     <string name="cancel">Cancel</string>
+    
+    <!-- Update Dialog Strings -->
+    <string name="update_title">New Update Available</string>
+    <string name="update_message">A new version of the app is available. You need to update to continue.</string>
+    <string name="update_button">Update</string>
+    
+    <!-- Widget Strings -->
+    <string name="widget_description">Shows today\'s date in Fixed Calendar format</string>
+    <string name="widget_info_title">Widget Available!</string>
+    <string name="widget_info_description">Add Fixed Calendar widget to your home screen for quick access to today\'s date. Long press on home screen → Widgets → Fixed Calendar → Today Date</string>
 </resources>

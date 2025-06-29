@@ -45,4 +45,7 @@
     <string name="cancel">Annulla</string>
     <string name="year_day_description">Il Giorno dell\'Anno è l\'ultimo giorno dell\'anno.</string>
     <string name="month_default_description">mese è composto da 28 giorni.</string>
+    <string name="update_title">Nuovo Aggiornamento Disponibile</string>
+    <string name="update_message">È disponibile una nuova versione dell\'app. È necessario aggiornare per continuare.</string>
+    <string name="update_button">Aggiorna</string>
 </resources>

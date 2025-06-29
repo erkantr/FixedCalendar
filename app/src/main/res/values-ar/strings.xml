@@ -19,6 +19,8 @@
     <string name="gregorian_calendar">التقويم الغريغوري</string>
     <string name="international_fixed_calendar">التقويم الثابت الدولي</string>
     <string name="sol_description">شهر سول هو شهر خاص يقع في منتصف السنة.</string>
+    <string name="year_day_description">يوم السنة هو اليوم الأخير من السنة.</string>
+    <string name="month_default_description">شهر يتكون من 28 يومًا.</string>
     <string name="info_top">معلومات</string>
     <string name="settings_top">الإعدادات</string>
     <string name="about">حول</string>
@@ -43,5 +45,10 @@
     <string name="select_theme_color">اختر لون السمة</string>
     <string name="okay">موافق</string>
     <string name="cancel">إلغاء</string>
+
+    <!-- Update Dialog Strings -->
+    <string name="update_title">تحديث جديد متاح</string>
+    <string name="update_message">يتوفر إصدار جديد من التطبيق. يجب عليك التحديث للمتابعة.</string>
+    <string name="update_button">تحديث</string>
 
 </resources>

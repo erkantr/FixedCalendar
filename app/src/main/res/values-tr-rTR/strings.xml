@@ -46,4 +46,13 @@
     <string name="okay">Tamam</string>
     <string name="cancel">İptal</string>
 
+    <!-- Update Dialog Strings -->
+    <string name="update_title">Yeni Güncelleme Mevcut</string>
+    <string name="update_message">Uygulamanın yeni bir sürümü mevcut. Devam etmek için güncellemelisiniz.</string>
+    <string name="update_button">Güncelle</string>
+    
+    <!-- Widget Strings -->
+    <string name="widget_description">Bugünkü tarihi Sabit Takvim formatında gösterir</string>
+    <string name="widget_info_title">Widget Mevcut!</string>
+    <string name="widget_info_description">Bugünkü tarihe hızlı erişim için ana ekranınıza Sabit Takvim widget\'ını ekleyin. Ana ekranda uzun basın → Widget\'lar → Fixed Calendar → Today Date</string>
 </resources>

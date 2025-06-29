@@ -27,6 +27,12 @@ class CalendarViewModel @Inject constructor() : ViewModel() {
         @Composable
         get() = convertToIFC(currentDate)
 
+    val currentYear: Int
+        get() = currentDate.year
+
+    val ifcYear: Int
+        get() = currentDate.year // IFC yılı Gregorian ile aynı
+
     val months: List<Int>
         get() = (1..14).toList() // 14. eleman Year Day için
 

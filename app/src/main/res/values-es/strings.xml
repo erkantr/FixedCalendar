@@ -46,4 +46,9 @@
     <string name="year_day_description">El Día del año es el último día del año.</string>
     <string name="month_default_description">mes consta de 28 días.</string>
 
+    <!-- Update Dialog Strings -->
+    <string name="update_title">Nueva Actualización Disponible</string>
+    <string name="update_message">Hay una nueva versión de la aplicación disponible. Debe actualizar para continuar.</string>
+    <string name="update_button">Actualizar</string>
+
 </resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_today_date"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="top|center">
+
+    <!-- Sol taraf - Yıl ve Gregorian -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="start|top">
+
+        <TextView
+            android:id="@+id/widget_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/widget_gregorian_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="29 June 2025"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+
+    <!-- Sağ taraf - IFC -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end|center_vertical">
+
+        <TextView
+            android:id="@+id/widget_ifc_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fixed Calendar"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/widget_ifc_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12 Sol"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout> 

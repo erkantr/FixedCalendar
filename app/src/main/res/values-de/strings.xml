@@ -45,4 +45,9 @@
     <string name="select_theme_color">Themenfarbe auswählen</string>
     <string name="okay">OK</string>
     <string name="cancel">Abbrechen</string>
+    
+    <!-- Update Dialog Strings -->
+    <string name="update_title">Neues Update Verfügbar</string>
+    <string name="update_message">Eine neue Version der App ist verfügbar. Sie müssen aktualisieren, um fortzufahren.</string>
+    <string name="update_button">Aktualisieren</string>
 </resources>
