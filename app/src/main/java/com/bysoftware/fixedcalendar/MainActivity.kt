@@ -82,10 +82,8 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxSize()
-                    ) {
+                    Column(modifier = Modifier.fillMaxSize()) {
+
                         val navController = rememberNavController()
                         NavHost(
                             navController = navController,
@@ -110,8 +108,8 @@ class MainActivity : ComponentActivity() {
                             }
                         }
                         
-                        // Reklam en altta - status bar ile çakışmasın
-                        AdmobBanner(modifier = Modifier.fillMaxWidth())
+                        // XML tabanlı ad view'ı göster
+                       // XmlAdBanner(modifier = Modifier.fillMaxWidth())
                     }
                 }
             }

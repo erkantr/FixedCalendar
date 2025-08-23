@@ -12,6 +12,12 @@ import java.time.format.DateTimeFormatter
 import java.util.Locale
 import javax.inject.Inject
 
+data class Month(
+    val month: Int,
+    val monthName: String,
+    val days: List<Int>
+)
+
 @HiltViewModel
 @RequiresApi(Build.VERSION_CODES.O)
 
@@ -24,7 +30,6 @@ class CalendarViewModel @Inject constructor() : ViewModel() {
         get() = currentDate.format(dateFormatter)
 
     val ifcDateText: String
-        @Composable
         get() = convertToIFC(currentDate)
 
     val currentYear: Int
@@ -33,8 +38,14 @@ class CalendarViewModel @Inject constructor() : ViewModel() {
     val ifcYear: Int
         get() = currentDate.year // IFC yılı Gregorian ile aynı
 
-    val months: List<Int>
-        get() = (1..14).toList() // 14. eleman Year Day için
+    val months: List<Month>
+        get() = (1..14).map { month ->
+            Month(
+                month = month,
+                monthName = getMonthName(month),
+                days = getDaysForMonth(month)
+            )
+        }
 
     val currentMonth: Int
         get() = calculateCurrentMonth()
@@ -42,23 +53,22 @@ class CalendarViewModel @Inject constructor() : ViewModel() {
     val currentDay: Int
         get() = calculateCurrentDay()
 
-    @Composable
     fun getMonthName(month: Int): String {
         return when (month) {
-            1 -> stringResource(R.string.january)
-            2 -> stringResource(R.string.february)
-            3 -> stringResource(R.string.march)
-            4 -> stringResource(R.string.april)
-            5 -> stringResource(R.string.may)
-            6 -> stringResource(R.string.june)
-            7 -> stringResource(R.string.sol)
-            8 -> stringResource(R.string.july)
-            9 -> stringResource(R.string.august)
-            10 -> stringResource(R.string.september)
-            11 -> stringResource(R.string.october)
-            12 -> stringResource(R.string.november)
-            13 -> stringResource(R.string.december)
-            14 -> stringResource(R.string.year_day)
+            1 -> "January"
+            2 -> "February"
+            3 -> "March"
+            4 -> "April"
+            5 -> "May"
+            6 -> "June"
+            7 -> "Sol"
+            8 -> "July"
+            9 -> "August"
+            10 -> "September"
+            11 -> "October"
+            12 -> "November"
+            13 -> "December"
+            14 -> "Year Day"
             else -> ""
         }
     }
@@ -88,19 +98,22 @@ class CalendarViewModel @Inject constructor() : ViewModel() {
         if (month != currentMonth) return false
         return day == currentDay
     }
-    @Composable
+
+    fun isCurrentDay(day: Int): Boolean {
+        return day == currentDay
+    }
     private fun convertToIFC(date: LocalDate): String {
         val dayOfYear = date.dayOfYear
         val isLeapYear = date.isLeapYear
 
         // Artık yıl kontrolü
         if (isLeapYear && dayOfYear == 366) {
-            return stringResource(R.string.year_day)
+            return "Year Day"
         }
 
         // Yıl sonu günü kontrolü
         if (!isLeapYear && dayOfYear == 365) {
-            return stringResource(R.string.year_day)
+            return "Year Day"
         }
 
         // Normal günler için hesaplama
