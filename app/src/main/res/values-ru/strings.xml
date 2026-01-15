@@ -17,6 +17,8 @@
     <string name="date">Дата</string>
     <string name="info">нажмите на месяц</string>
     <string name="gregorian_calendar">Григорианский календарь</string>
+    <string name="year_day_description">День года — это последний день года.</string>
+    <string name="month_default_description">Месяц состоит из 28 дней.</string>
     <string name="international_fixed_calendar">Международный фиксированный календарь</string>
     <string name="sol_description">Месяц Соль — это особый месяц, расположенный в середине года.</string>
     <string name="info_top">Информация</string>

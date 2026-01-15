@@ -16,6 +16,8 @@
     <string name="december">December</string>
     <string name="date">Date</string>
     <string name="info">click on month</string>
+    <string name="year_day_description">Year Day is the last day of the year.</string>
+    <string name="month_default_description">month consists of 28 days.</string>
     <string name="gregorian_calendar">Gregorian Calendar</string>
     <string name="international_fixed_calendar">International Fixed Calendar</string>
     <string name="sol_description">The month of Sol is a special month located in the middle of the year.</string>

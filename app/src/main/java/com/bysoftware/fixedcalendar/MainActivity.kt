@@ -172,7 +172,7 @@ fun AdmobBanner(modifier: Modifier = Modifier) {
                     context, AdSize.FULL_WIDTH
                 )
                 setAdSize(adSize)
-                adUnitId = "ca-app-pub-3940256099942544/9214589741"
+                adUnitId = "ca-app-pub-2803818874072639/6740291831"
                 loadAd(AdRequest.Builder().build())
             }
         }

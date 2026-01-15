@@ -15,6 +15,8 @@
     <string name="november">تشرين الثاني</string>
     <string name="december">كانون الأول</string>
     <string name="date">التاريخ</string>
+    <string name="year_day_description">يوم السنة هو اليوم الأخير من السنة.</string>
+    <string name="month_default_description">يتكون الشهر من ٢٨ يومًا.</string>
     <string name="info">انقر على الشهر</string>
     <string name="gregorian_calendar">التقويم الغريغوري</string>
     <string name="international_fixed_calendar">التقويم الثابت الدولي</string>

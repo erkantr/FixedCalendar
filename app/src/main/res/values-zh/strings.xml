@@ -20,6 +20,8 @@
     <string name="international_fixed_calendar">国际固定日历</string>
     <string name="sol_description">索尔月是位于年中间的特殊月份。</string>
     <string name="info_top">信息</string>
+    <string name="year_day_description">年日是一年的最後一天。</string>
+    <string name="month_default_description">一個月有28天。</string>
     <string name="settings_top">设置</string>
     <string name="about">关于</string>
     <string name="back">返回</string>
