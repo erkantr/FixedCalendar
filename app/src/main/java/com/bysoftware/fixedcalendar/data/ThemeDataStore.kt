@@ -38,6 +38,7 @@ class ThemeDataStore @Inject constructor(@ApplicationContext private val context
         val USE_CUSTOM_THEME = booleanPreferencesKey("use_custom_theme")
         val CUSTOM_PRIMARY_COLOR = intPreferencesKey("custom_primary_color")
         val LANGUAGE = stringPreferencesKey("language")
+        val USE_MODERN_DESIGN = booleanPreferencesKey("use_modern_design")
     }
 
     val isDarkMode: Flow<Boolean> = context.dataStore.data.map { preferences ->
@@ -54,6 +55,10 @@ class ThemeDataStore @Inject constructor(@ApplicationContext private val context
 
     val language: Flow<String> = context.dataStore.data.map { preferences ->
         preferences[PreferencesKeys.LANGUAGE] ?: "English"
+    }
+
+    val useModernDesign: Flow<Boolean> = context.dataStore.data.map { preferences ->
+        preferences[PreferencesKeys.USE_MODERN_DESIGN] ?: false
     }
 
     suspend fun setDarkMode(isDarkMode: Boolean) {
@@ -77,6 +82,12 @@ class ThemeDataStore @Inject constructor(@ApplicationContext private val context
     suspend fun setLanguage(language: String) {
         context.dataStore.edit { preferences ->
             preferences[PreferencesKeys.LANGUAGE] = language
+        }
+    }
+
+    suspend fun setUseModernDesign(useModernDesign: Boolean) {
+        context.dataStore.edit { preferences ->
+            preferences[PreferencesKeys.USE_MODERN_DESIGN] = useModernDesign
         }
     }
 

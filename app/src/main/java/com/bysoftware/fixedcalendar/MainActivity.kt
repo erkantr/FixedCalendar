@@ -28,7 +28,12 @@ import androidx.navigation.compose.rememberNavController
 import com.bysoftware.fixedcalendar.data.ThemeDataStore
 import com.bysoftware.fixedcalendar.ui.screens.CalendarScreen
 import com.bysoftware.fixedcalendar.ui.screens.InfoScreen
+import com.bysoftware.fixedcalendar.ui.screens.ModernCalendarScreen
 import com.bysoftware.fixedcalendar.ui.screens.SettingsScreen
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
 import com.bysoftware.fixedcalendar.ui.theme.FixedCalendarTheme
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
@@ -86,16 +91,25 @@ class MainActivity : ComponentActivity() {
                         AdmobBanner(modifier = Modifier.fillMaxWidth())
 
                         val navController = rememberNavController()
+                        val useModernDesign by themeDataStore.useModernDesign.collectAsState(initial = false)
+                        
                         NavHost(
                             navController = navController,
                             startDestination = "calendar",
                             modifier = Modifier.weight(1f)
                         ) {
                             composable("calendar") {
-                                CalendarScreen(
-                                    onInfoClick = { navController.navigate("info") },
-                                    onSettingsClick = { navController.navigate("settings") }
-                                )
+                                if (useModernDesign) {
+                                    ModernCalendarScreen(
+                                        onInfoClick = { navController.navigate("info") },
+                                        onSettingsClick = { navController.navigate("settings") }
+                                    )
+                                } else {
+                                    CalendarScreen(
+                                        onInfoClick = { navController.navigate("info") },
+                                        onSettingsClick = { navController.navigate("settings") }
+                                    )
+                                }
                             }
                             composable("info") {
                                 InfoScreen(

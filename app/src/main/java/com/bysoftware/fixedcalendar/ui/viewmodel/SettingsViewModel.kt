@@ -2,6 +2,7 @@ package com.bysoftware.fixedcalendar.ui.viewmodel
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.preference.PreferenceManager
 import android.preference.PreferenceManager.*
 import androidx.compose.ui.graphics.Color
@@ -9,7 +10,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bysoftware.fixedcalendar.LocaleHelper
 import com.bysoftware.fixedcalendar.data.ThemeDataStore
+import com.bysoftware.fixedcalendar.widget.CalendarWidgetReceiver
 import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
@@ -20,7 +23,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
-    private val themeDataStore: ThemeDataStore
+    private val themeDataStore: ThemeDataStore,
+    @ApplicationContext private val appContext: Context
 ) : ViewModel() {
 
     val isDarkMode: StateFlow<Boolean> = themeDataStore.isDarkMode
@@ -35,22 +39,41 @@ class SettingsViewModel @Inject constructor(
     val language: StateFlow<String> = themeDataStore.language
         .stateIn(viewModelScope, SharingStarted.Eagerly, "English")
 
+    val useModernDesign: StateFlow<Boolean> = themeDataStore.useModernDesign
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
     fun setDarkMode(enabled: Boolean) {
         viewModelScope.launch {
             themeDataStore.setDarkMode(enabled)
+            updateWidget()
         }
     }
 
     fun setUseCustomTheme(enabled: Boolean) {
         viewModelScope.launch {
             themeDataStore.setUseCustomTheme(enabled)
+            updateWidget()
         }
     }
 
     fun setCustomPrimaryColor(color: Color) {
         viewModelScope.launch {
             themeDataStore.setCustomPrimaryColor(color)
+            updateWidget()
         }
+    }
+
+    fun setUseModernDesign(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setUseModernDesign(enabled)
+        }
+    }
+    
+    private fun updateWidget() {
+        val intent = Intent(appContext, CalendarWidgetReceiver::class.java).apply {
+            action = CalendarWidgetReceiver.ACTION_UPDATE_WIDGET
+        }
+        appContext.sendBroadcast(intent)
     }
 
     fun setLanguage(selectedLanguage: String) {

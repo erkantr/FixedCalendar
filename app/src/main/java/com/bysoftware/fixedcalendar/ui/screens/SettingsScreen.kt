@@ -46,6 +46,7 @@ fun SettingsScreen(
     val language by viewModel.language.collectAsState()
     val useCustomTheme by viewModel.useCustomTheme.collectAsState()
     val customPrimaryColor by viewModel.customPrimaryColor.collectAsState()
+    val useModernDesign by viewModel.useModernDesign.collectAsState()
     
     // Dil seçimi için mutableState değişkeni
     var selectedLanguage by remember { mutableStateOf(language) }
@@ -90,6 +91,37 @@ fun SettingsScreen(
                     .padding(16.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp)
             ) {
+                // Modern Tasarım Ayarı
+                ElevatedCard(
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(16.dp),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Column(
+                            verticalArrangement = Arrangement.spacedBy(4.dp)
+                        ) {
+                            Text(
+                                "Modern Tasarım",
+                                style = MaterialTheme.typography.bodyLarge
+                            )
+                            Text(
+                                "14 kartlı görünüm",
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                        Switch(
+                            checked = useModernDesign,
+                            onCheckedChange = { viewModel.setUseModernDesign(it) }
+                        )
+                    }
+                }
+
                 // Karanlık Mod Ayarı
                 ElevatedCard(
                     modifier = Modifier.fillMaxWidth()
