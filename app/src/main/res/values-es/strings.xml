@@ -46,4 +46,56 @@
     <string name="year_day_description">El Día del año es el último día del año.</string>
     <string name="month_default_description">mes consta de 28 días.</string>
 
+    <string name="converter">Conversor</string>
+    <string name="share">Compartir</string>
+    <string name="share_today_text">Hoy es %1$s en el Calendario Fijo Internacional (%2$s)</string>
+    <string name="previous_month">Anterior</string>
+    <string name="next_month">Siguiente</string>
+    <string name="today">Hoy</string>
+
+    <string name="cd_day">Día %1$d de %2$s</string>
+    <string name="cd_day_today">Hoy, día %1$d de %2$s</string>
+
+    <string name="gregorian_calendar_header">CALENDARIO GREGORIANO</string>
+    <string name="international_fixed_header">FIJO INTERNACIONAL</string>
+    <string name="now_badge">AHORA</string>
+    <string name="year_day_header">DÍA DEL AÑO</string>
+    <string name="global_holiday">Fiesta global</string>
+    <string name="leap_day_footer">Día Bisiesto añadido cada 4 años después de Sol 28</string>
+    <string name="dec_fixed">DIC FIJO</string>
+    <string name="week_short">S</string>
+
+    <string name="modern_design">Diseño Moderno</string>
+    <string name="modern_design_desc">Vista de 14 tarjetas</string>
+    <string name="dynamic_color">Color dinámico (Material You)</string>
+    <string name="dynamic_color_desc">Usa los colores del sistema</string>
+    <string name="show_week_numbers">Mostrar números de semana</string>
+    <string name="show_week_numbers_desc">Muestra S1-S4 junto a cada semana</string>
+    <string name="enable_notifications">Notificaciones de días especiales</string>
+    <string name="enable_notifications_desc">Recibe avisos por Día del Año y Día Bisiesto</string>
+    <string name="header_style_title">Estilo de encabezado</string>
+    <string name="header_style_desc">Elige cómo se muestra la fecha arriba</string>
+    <string name="header_style_compact">Tarjeta compacta</string>
+    <string name="header_style_stacked">Mínimo apilado</string>
+    <string name="header_style_pill">Chips de píldora</string>
+    <string name="gregorian_inline_label">Gregoriano: %1$s</string>
+    <string name="privacy_policy">Política de privacidad</string>
+
+    <string name="convert_gregorian_to_ifc">Gregoriano → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregoriano</string>
+    <string name="select_date">Seleccionar fecha</string>
+    <string name="month_label">Mes</string>
+    <string name="day_label">Día</string>
+    <string name="year_label">Año</string>
+    <string name="convert">Convertir</string>
+    <string name="result">Resultado</string>
+    <string name="leap_day">Día Bisiesto</string>
+    <string name="invalid_input">Entrada no válida</string>
+
+    <string name="notif_year_day_title">¡Día del Año!</string>
+    <string name="notif_year_day_text">Hoy es el último día especial del año en el IFC.</string>
+    <string name="notif_leap_day_title">¡Día Bisiesto!</string>
+    <string name="notif_leap_day_text">Hoy es el Día Bisiesto, que ocurre cada 4 años.</string>
+    <string name="notif_channel_name">Recordatorios de días especiales</string>
+    <string name="notif_channel_desc">Notificaciones para Día del Año y Día Bisiesto</string>
 </resources>

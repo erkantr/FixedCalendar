@@ -111,15 +111,21 @@ private val DefaultLightColorScheme = lightColorScheme(
 
 @Composable
 fun FixedCalendarTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    @Suppress("UNUSED_PARAMETER") darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val settingsViewModel: SettingsViewModel = hiltViewModel()
     val isDarkMode by settingsViewModel.isDarkMode.collectAsState()
     val useCustomTheme by settingsViewModel.useCustomTheme.collectAsState()
     val customPrimaryColor by settingsViewModel.customPrimaryColor.collectAsState()
+    val useDynamicColor by settingsViewModel.useDynamicColor.collectAsState()
 
+    val context = LocalContext.current
     val colorScheme = when {
+        useDynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            if (isDarkMode) dynamicDarkColorScheme(context)
+            else dynamicLightColorScheme(context)
+        }
         useCustomTheme -> {
             if (isDarkMode) createDarkColorScheme(customPrimaryColor)
             else createLightColorScheme(customPrimaryColor)

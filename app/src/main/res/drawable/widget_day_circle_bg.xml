@@ -5,3 +5,4 @@
     <!-- Renk kod tarafından tint ile ayarlanacak -->
     <solid android:color="@android:color/transparent"/>
 </shape>
+

@@ -10,6 +10,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.bysoftware.fixedcalendar.LocaleHelper
 import com.bysoftware.fixedcalendar.data.ThemeDataStore
+import com.bysoftware.fixedcalendar.notifications.NotificationScheduler
+import androidx.glance.appwidget.updateAll
+import com.bysoftware.fixedcalendar.widget.CalendarWidget
 import com.bysoftware.fixedcalendar.widget.CalendarWidgetReceiver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -42,6 +45,39 @@ class SettingsViewModel @Inject constructor(
     val useModernDesign: StateFlow<Boolean> = themeDataStore.useModernDesign
         .stateIn(viewModelScope, SharingStarted.Eagerly, false)
 
+    val useDynamicColor: StateFlow<Boolean> = themeDataStore.useDynamicColor
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val showWeekNumbers: StateFlow<Boolean> = themeDataStore.showWeekNumbers
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val enableNotifications: StateFlow<Boolean> = themeDataStore.enableNotifications
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val headerStyle: StateFlow<Int> = themeDataStore.headerStyle
+        .stateIn(viewModelScope, SharingStarted.Eagerly, 0)
+
+    val widgetStyle: StateFlow<Int> = themeDataStore.widgetStyle
+        .stateIn(viewModelScope, SharingStarted.Eagerly, 3)
+
+    val hasSeenOnboarding: StateFlow<Boolean> = themeDataStore.hasSeenOnboarding
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val widgetUseCustomTheme: StateFlow<Boolean> = themeDataStore.widgetUseCustomTheme
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val widgetIsDarkMode: StateFlow<Boolean> = themeDataStore.widgetIsDarkMode
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val widgetUseDynamicColor: StateFlow<Boolean> = themeDataStore.widgetUseDynamicColor
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val widgetUseCustomColor: StateFlow<Boolean> = themeDataStore.widgetUseCustomColor
+        .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val widgetCustomPrimaryColor: StateFlow<Color> = themeDataStore.widgetCustomPrimaryColor
+        .stateIn(viewModelScope, SharingStarted.Eagerly, Color(0xFFD32F2F))
+
     fun setDarkMode(enabled: Boolean) {
         viewModelScope.launch {
             themeDataStore.setDarkMode(enabled)
@@ -68,12 +104,101 @@ class SettingsViewModel @Inject constructor(
             themeDataStore.setUseModernDesign(enabled)
         }
     }
-    
-    private fun updateWidget() {
-        val intent = Intent(appContext, CalendarWidgetReceiver::class.java).apply {
-            action = CalendarWidgetReceiver.ACTION_UPDATE_WIDGET
+
+    fun setUseDynamicColor(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setUseDynamicColor(enabled)
+            updateWidget()
         }
-        appContext.sendBroadcast(intent)
+    }
+
+    fun setShowWeekNumbers(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setShowWeekNumbers(enabled)
+        }
+    }
+
+    fun setHeaderStyle(value: Int) {
+        viewModelScope.launch {
+            themeDataStore.setHeaderStyle(value)
+            updateWidget()
+        }
+    }
+
+    fun setWidgetStyle(value: Int) {
+        viewModelScope.launch {
+            themeDataStore.setWidgetStyle(value)
+            updateWidget()
+        }
+    }
+
+    fun setHasSeenOnboarding(value: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setHasSeenOnboarding(value)
+        }
+    }
+
+    fun setWidgetUseCustomTheme(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setWidgetUseCustomTheme(enabled)
+            updateWidget()
+        }
+    }
+
+    fun setWidgetIsDarkMode(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setWidgetIsDarkMode(enabled)
+            updateWidget()
+        }
+    }
+
+    fun setWidgetUseDynamicColor(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setWidgetUseDynamicColor(enabled)
+            updateWidget()
+        }
+    }
+
+    fun setWidgetUseCustomColor(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setWidgetUseCustomColor(enabled)
+            updateWidget()
+        }
+    }
+
+    fun setWidgetCustomPrimaryColor(color: Color) {
+        viewModelScope.launch {
+            themeDataStore.setWidgetCustomPrimaryColor(color)
+            updateWidget()
+        }
+    }
+
+    fun setEnableNotifications(enabled: Boolean) {
+        viewModelScope.launch {
+            themeDataStore.setEnableNotifications(enabled)
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                if (enabled) {
+                    NotificationScheduler.scheduleAll(appContext)
+                } else {
+                    NotificationScheduler.cancelAll(appContext)
+                }
+            }
+        }
+    }
+    
+    /**
+     * Widget'ı anında günceller.
+     * - Doğrudan Glance updateAll çağırır (güvenilir, instant)
+     * - Ayrıca yedek olarak broadcast yollar.
+     */
+    private suspend fun updateWidget() {
+        runCatching { CalendarWidget().updateAll(appContext) }
+        runCatching {
+            val intent = Intent(appContext, CalendarWidgetReceiver::class.java).apply {
+                action = CalendarWidgetReceiver.ACTION_UPDATE_WIDGET
+            }
+            appContext.sendBroadcast(intent)
+        }
     }
 
     fun setLanguage(selectedLanguage: String) {

@@ -46,4 +46,56 @@
     <string name="year_day_description">O Dia do Ano é o último dia do ano.</string>
     <string name="month_default_description">mês consiste em 28 dias.</string>
 
+    <string name="converter">Conversor</string>
+    <string name="share">Compartilhar</string>
+    <string name="share_today_text">Hoje é %1$s no Calendário Fixo Internacional (%2$s)</string>
+    <string name="previous_month">Anterior</string>
+    <string name="next_month">Próximo</string>
+    <string name="today">Hoje</string>
+
+    <string name="cd_day">Dia %1$d de %2$s</string>
+    <string name="cd_day_today">Hoje, dia %1$d de %2$s</string>
+
+    <string name="gregorian_calendar_header">CALENDÁRIO GREGORIANO</string>
+    <string name="international_fixed_header">FIXO INTERNACIONAL</string>
+    <string name="now_badge">AGORA</string>
+    <string name="year_day_header">DIA DO ANO</string>
+    <string name="global_holiday">Feriado Global</string>
+    <string name="leap_day_footer">Dia Bissexto adicionado a cada 4 anos após Sol 28</string>
+    <string name="dec_fixed">DEZ FIXO</string>
+    <string name="week_short">S</string>
+
+    <string name="modern_design">Design Moderno</string>
+    <string name="modern_design_desc">Vista com 14 cartões</string>
+    <string name="dynamic_color">Cor Dinâmica (Material You)</string>
+    <string name="dynamic_color_desc">Usar cores do sistema</string>
+    <string name="show_week_numbers">Mostrar números das semanas</string>
+    <string name="show_week_numbers_desc">Exibe S1-S4 ao lado de cada semana</string>
+    <string name="enable_notifications">Notificações de dias especiais</string>
+    <string name="enable_notifications_desc">Receba avisos para Dia do Ano e Dia Bissexto</string>
+    <string name="header_style_title">Estilo do cabeçalho</string>
+    <string name="header_style_desc">Escolha como a data é exibida no topo</string>
+    <string name="header_style_compact">Cartão compacto</string>
+    <string name="header_style_stacked">Mínimo empilhado</string>
+    <string name="header_style_pill">Chips pílula</string>
+    <string name="gregorian_inline_label">Gregoriano: %1$s</string>
+    <string name="privacy_policy">Política de Privacidade</string>
+
+    <string name="convert_gregorian_to_ifc">Gregoriano → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregoriano</string>
+    <string name="select_date">Selecionar Data</string>
+    <string name="month_label">Mês</string>
+    <string name="day_label">Dia</string>
+    <string name="year_label">Ano</string>
+    <string name="convert">Converter</string>
+    <string name="result">Resultado</string>
+    <string name="leap_day">Dia Bissexto</string>
+    <string name="invalid_input">Entrada inválida</string>
+
+    <string name="notif_year_day_title">Dia do Ano!</string>
+    <string name="notif_year_day_text">Hoje é o último dia especial do ano no IFC.</string>
+    <string name="notif_leap_day_title">Dia Bissexto!</string>
+    <string name="notif_leap_day_text">Hoje é o Dia Bissexto, que ocorre a cada 4 anos.</string>
+    <string name="notif_channel_name">Lembretes de dias especiais</string>
+    <string name="notif_channel_desc">Notificações para Dia do Ano e Dia Bissexto</string>
 </resources>

@@ -46,4 +46,56 @@
     <string name="okay">OK</string>
     <string name="cancel">Annuler</string>
 
+    <string name="converter">Convertisseur</string>
+    <string name="share">Partager</string>
+    <string name="share_today_text">Aujourd\'hui c\'est le %1$s dans le Calendrier Fixe International (%2$s)</string>
+    <string name="previous_month">Précédent</string>
+    <string name="next_month">Suivant</string>
+    <string name="today">Aujourd\'hui</string>
+
+    <string name="cd_day">Jour %1$d de %2$s</string>
+    <string name="cd_day_today">Aujourd\'hui, jour %1$d de %2$s</string>
+
+    <string name="gregorian_calendar_header">CALENDRIER GRÉGORIEN</string>
+    <string name="international_fixed_header">FIXE INTERNATIONAL</string>
+    <string name="now_badge">MAINT.</string>
+    <string name="year_day_header">JOUR DE L\'ANNÉE</string>
+    <string name="global_holiday">Fête mondiale</string>
+    <string name="leap_day_footer">Jour Bissextile ajouté tous les 4 ans après Sol 28</string>
+    <string name="dec_fixed">DÉC FIXE</string>
+    <string name="week_short">S</string>
+
+    <string name="modern_design">Design Moderne</string>
+    <string name="modern_design_desc">Vue à 14 cartes</string>
+    <string name="dynamic_color">Couleur Dynamique (Material You)</string>
+    <string name="dynamic_color_desc">Utiliser les couleurs du système</string>
+    <string name="show_week_numbers">Afficher les numéros de semaine</string>
+    <string name="show_week_numbers_desc">Affiche S1-S4 à côté de chaque semaine</string>
+    <string name="enable_notifications">Notifications jours spéciaux</string>
+    <string name="enable_notifications_desc">Recevez des notifications pour le Jour de l\'Année et le Jour Bissextile</string>
+    <string name="header_style_title">Style d\'en-tête</string>
+    <string name="header_style_desc">Choisissez l\'affichage de la date en haut</string>
+    <string name="header_style_compact">Carte compacte</string>
+    <string name="header_style_stacked">Minimal empilé</string>
+    <string name="header_style_pill">Chips pilule</string>
+    <string name="gregorian_inline_label">Grégorien : %1$s</string>
+    <string name="privacy_policy">Politique de confidentialité</string>
+
+    <string name="convert_gregorian_to_ifc">Grégorien → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Grégorien</string>
+    <string name="select_date">Sélectionner une date</string>
+    <string name="month_label">Mois</string>
+    <string name="day_label">Jour</string>
+    <string name="year_label">Année</string>
+    <string name="convert">Convertir</string>
+    <string name="result">Résultat</string>
+    <string name="leap_day">Jour Bissextile</string>
+    <string name="invalid_input">Entrée invalide</string>
+
+    <string name="notif_year_day_title">Jour de l\'Année !</string>
+    <string name="notif_year_day_text">Aujourd\'hui c\'est le dernier jour spécial de l\'année dans l\'IFC.</string>
+    <string name="notif_leap_day_title">Jour Bissextile !</string>
+    <string name="notif_leap_day_text">Aujourd\'hui c\'est le Jour Bissextile, qui n\'arrive qu\'une fois tous les 4 ans.</string>
+    <string name="notif_channel_name">Rappels jours spéciaux</string>
+    <string name="notif_channel_desc">Notifications pour le Jour de l\'Année et le Jour Bissextile</string>
 </resources>

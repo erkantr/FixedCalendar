@@ -27,12 +27,23 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.bysoftware.fixedcalendar.data.ThemeDataStore
 import com.bysoftware.fixedcalendar.ui.screens.CalendarScreen
+import com.bysoftware.fixedcalendar.ui.screens.ConverterScreen
 import com.bysoftware.fixedcalendar.ui.screens.InfoScreen
 import com.bysoftware.fixedcalendar.ui.screens.ModernCalendarScreen
+import com.bysoftware.fixedcalendar.ui.screens.OnboardingScreen
 import com.bysoftware.fixedcalendar.ui.screens.SettingsScreen
+import com.bysoftware.fixedcalendar.ui.screens.ThemeSettingsScreen
+import com.bysoftware.fixedcalendar.ui.screens.WidgetSettingsScreen
+import com.bysoftware.fixedcalendar.ui.screens.components.HeaderStyle
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import com.bysoftware.fixedcalendar.ui.theme.FixedCalendarTheme
 import com.google.android.gms.ads.AdListener
@@ -73,7 +84,14 @@ class MainActivity : ComponentActivity() {
         MobileAds.initialize(this) { initStatus ->
             Log.d("ADS_DEBUG", "MobileAds initialization complete!")
         }
-        
+
+        // Açılışta klasik→modern flicker'ını önlemek için kullanıcı tercihlerini
+        // setContent'ten önce senkron oku.
+        val initialModern = runBlocking { themeDataStore.useModernDesign.first() }
+        val initialWeek = runBlocking { themeDataStore.showWeekNumbers.first() }
+        val initialHeaderStyle = runBlocking { themeDataStore.headerStyle.first() }
+        val initialHasSeenOnboarding = runBlocking { themeDataStore.hasSeenOnboarding.first() }
+
         setContent {
             // Test cihazı belirtelim
             MobileAds.setRequestConfiguration(
@@ -86,13 +104,29 @@ class MainActivity : ComponentActivity() {
                 Surface(
                     modifier = Modifier.fillMaxSize()
                 ) {
+                    var showOnboarding by remember { mutableStateOf(!initialHasSeenOnboarding) }
+
+                    if (showOnboarding) {
+                        OnboardingScreen(
+                            onFinish = {
+                                showOnboarding = false
+                                CoroutineScope(Dispatchers.IO).launch {
+                                    themeDataStore.setHasSeenOnboarding(true)
+                                }
+                            }
+                        )
+                        return@Surface
+                    }
+
                     Column(modifier = Modifier.fillMaxSize()) {
 
                         AdmobBanner(modifier = Modifier.fillMaxWidth())
 
                         val navController = rememberNavController()
-                        val useModernDesign by themeDataStore.useModernDesign.collectAsState(initial = false)
-                        
+                        val useModernDesign by themeDataStore.useModernDesign.collectAsState(initial = initialModern)
+                        val showWeekNumbers by themeDataStore.showWeekNumbers.collectAsState(initial = initialWeek)
+                        val headerStyleKey by themeDataStore.headerStyle.collectAsState(initial = initialHeaderStyle)
+
                         NavHost(
                             navController = navController,
                             startDestination = "calendar",
@@ -102,12 +136,17 @@ class MainActivity : ComponentActivity() {
                                 if (useModernDesign) {
                                     ModernCalendarScreen(
                                         onInfoClick = { navController.navigate("info") },
-                                        onSettingsClick = { navController.navigate("settings") }
+                                        onSettingsClick = { navController.navigate("settings") },
+                                        onConverterClick = { navController.navigate("converter") },
+                                        showWeekNumbers = showWeekNumbers,
+                                        headerStyle = HeaderStyle.fromKey(headerStyleKey)
                                     )
                                 } else {
                                     CalendarScreen(
                                         onInfoClick = { navController.navigate("info") },
-                                        onSettingsClick = { navController.navigate("settings") }
+                                        onSettingsClick = { navController.navigate("settings") },
+                                        onConverterClick = { navController.navigate("converter") },
+                                        headerStyle = HeaderStyle.fromKey(headerStyleKey)
                                     )
                                 }
                             }
@@ -118,6 +157,23 @@ class MainActivity : ComponentActivity() {
                             }
                             composable("settings") {
                                 SettingsScreen(
+                                    onBackClick = { navController.navigateUp() },
+                                    onThemeSettingsClick = { navController.navigate("settings/theme") },
+                                    onWidgetSettingsClick = { navController.navigate("settings/widget") }
+                                )
+                            }
+                            composable("settings/theme") {
+                                ThemeSettingsScreen(
+                                    onBackClick = { navController.navigateUp() }
+                                )
+                            }
+                            composable("settings/widget") {
+                                WidgetSettingsScreen(
+                                    onBackClick = { navController.navigateUp() }
+                                )
+                            }
+                            composable("converter") {
+                                ConverterScreen(
                                     onBackClick = { navController.navigateUp() }
                                 )
                             }

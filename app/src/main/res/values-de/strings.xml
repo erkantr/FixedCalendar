@@ -45,4 +45,57 @@
     <string name="select_theme_color">Themenfarbe auswählen</string>
     <string name="okay">OK</string>
     <string name="cancel">Abbrechen</string>
+
+    <string name="converter">Umrechner</string>
+    <string name="share">Teilen</string>
+    <string name="share_today_text">Heute ist %1$s im Internationalen Festen Kalender (%2$s)</string>
+    <string name="previous_month">Zurück</string>
+    <string name="next_month">Weiter</string>
+    <string name="today">Heute</string>
+
+    <string name="cd_day">Tag %1$d von %2$s</string>
+    <string name="cd_day_today">Heute, Tag %1$d von %2$s</string>
+
+    <string name="gregorian_calendar_header">GREGORIANISCHER KALENDER</string>
+    <string name="international_fixed_header">INTERNATIONAL FEST</string>
+    <string name="now_badge">JETZT</string>
+    <string name="year_day_header">JAHRESTAG</string>
+    <string name="global_holiday">Welttag</string>
+    <string name="leap_day_footer">Schalttag wird alle 4 Jahre nach Sol 28 hinzugefügt</string>
+    <string name="dec_fixed">DEZ FEST</string>
+    <string name="week_short">W</string>
+
+    <string name="modern_design">Modernes Design</string>
+    <string name="modern_design_desc">14-Karten-Ansicht</string>
+    <string name="dynamic_color">Dynamische Farbe (Material You)</string>
+    <string name="dynamic_color_desc">Systemhintergrundfarben verwenden</string>
+    <string name="show_week_numbers">Wochennummern anzeigen</string>
+    <string name="show_week_numbers_desc">W1-W4 neben jeder Woche anzeigen</string>
+    <string name="enable_notifications">Benachrichtigungen für besondere Tage</string>
+    <string name="enable_notifications_desc">Benachrichtigungen für Jahrestag und Schalttag</string>
+    <string name="header_style_title">Header-Stil</string>
+    <string name="header_style_desc">Wähle, wie das Datum oben angezeigt wird</string>
+    <string name="header_style_compact">Kompakte Karte</string>
+    <string name="header_style_stacked">Minimal Gestapelt</string>
+    <string name="header_style_pill">Pill-Chips</string>
+    <string name="gregorian_inline_label">Gregorianisch: %1$s</string>
+    <string name="privacy_policy">Datenschutzerklärung</string>
+
+    <string name="convert_gregorian_to_ifc">Gregorianisch → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregorianisch</string>
+    <string name="select_date">Datum auswählen</string>
+    <string name="month_label">Monat</string>
+    <string name="day_label">Tag</string>
+    <string name="year_label">Jahr</string>
+    <string name="convert">Umrechnen</string>
+    <string name="result">Ergebnis</string>
+    <string name="leap_day">Schalttag</string>
+    <string name="invalid_input">Ungültige Eingabe</string>
+
+    <string name="notif_year_day_title">Jahrestag!</string>
+    <string name="notif_year_day_text">Heute ist der besondere letzte Tag des Jahres im IFC.</string>
+    <string name="notif_leap_day_title">Schalttag!</string>
+    <string name="notif_leap_day_text">Heute ist der seltene Schalttag (alle 4 Jahre).</string>
+    <string name="notif_channel_name">Erinnerungen für besondere Tage</string>
+    <string name="notif_channel_desc">Benachrichtigungen für Jahrestag und Schalttag</string>
 </resources>

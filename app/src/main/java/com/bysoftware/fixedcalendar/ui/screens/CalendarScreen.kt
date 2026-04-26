@@ -1,46 +1,51 @@
 package com.bysoftware.fixedcalendar.ui.screens
 
-import android.content.res.Resources.Theme
+import android.content.Intent
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
+import androidx.compose.foundation.gestures.ScrollableDefaults
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.gestures.ScrollableDefaults
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ChevronLeft
+import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.filled.SwapHoriz
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.bysoftware.fixedcalendar.R
-import com.bysoftware.fixedcalendar.ui.theme.FixedCalendarTheme
+import com.bysoftware.fixedcalendar.ui.screens.components.HeaderStyle
+import com.bysoftware.fixedcalendar.ui.screens.components.HeroCompactHeader
+import com.bysoftware.fixedcalendar.ui.screens.components.PillChipHeader
+import com.bysoftware.fixedcalendar.ui.screens.components.StackedMinimalHeader
 import com.bysoftware.fixedcalendar.ui.theme.PreviewFixedCalendarTheme
 import com.bysoftware.fixedcalendar.ui.viewmodel.CalendarViewModel
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
 
 @RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
@@ -49,34 +54,70 @@ fun CalendarScreen(
     viewModel: CalendarViewModel = hiltViewModel(),
     onInfoClick: () -> Unit = {},
     onSettingsClick: () -> Unit = {},
+    onConverterClick: () -> Unit = {},
+    headerStyle: HeaderStyle = HeaderStyle.HERO_COMPACT,
 ) {
     val configuration = LocalConfiguration.current
     val screenWidth = configuration.screenWidthDp.dp
-    val isTablet = remember { screenWidth >= 600.dp }
-    val gridColumns = remember { if (isTablet) 4 else 2 }
-    val cardHeight = remember { if (isTablet) 200.dp else 160.dp }
+    val context = LocalContext.current
+
+    // Responsive sütun sayısı ve yatay boşluk
+    val gridColumns = when {
+        screenWidth < 360.dp -> 1
+        screenWidth < 600.dp -> 2
+        screenWidth < 840.dp -> 3
+        else -> 4
+    }
+    val horizontalPadding: Dp = when {
+        screenWidth < 360.dp -> 12.dp
+        screenWidth < 600.dp -> 16.dp
+        else -> 32.dp
+    }
 
     Scaffold(
-
-        topBar = {
-        }
+        topBar = {}
     ) { paddingValues ->
-
         Column(
-            Modifier
-                .fillMaxSize()
+            Modifier.fillMaxSize()
         ) {
-           // AdmobBanner(modifier = Modifier.fillMaxWidth())
-
             CenterAlignedTopAppBar(
                 title = {
                     Text(
-                        "Fixed Calendar",
+                        stringResource(R.string.app_name),
                         style = MaterialTheme.typography.titleLarge,
-                        maxLines = 1
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
                     )
                 },
                 actions = {
+                    IconButton(onClick = onConverterClick) {
+                        Icon(
+                            Icons.Default.SwapHoriz,
+                            contentDescription = stringResource(R.string.converter)
+                        )
+                    }
+                    IconButton(onClick = {
+                        val shareText = context.getString(
+                            R.string.share_today_text,
+                            viewModel.ifcDateTextRaw,
+                            viewModel.gregorianDate
+                        )
+                        val sendIntent = Intent(Intent.ACTION_SEND).apply {
+                            type = "text/plain"
+                            putExtra(Intent.EXTRA_TEXT, shareText)
+                        }
+                        context.startActivity(
+                            Intent.createChooser(
+                                sendIntent,
+                                context.getString(R.string.share)
+                            )
+                        )
+                    }) {
+                        Icon(
+                            Icons.Default.Share,
+                            contentDescription = stringResource(R.string.share)
+                        )
+                    }
                     IconButton(onClick = onInfoClick) {
                         Icon(
                             Icons.Default.Info,
@@ -101,17 +142,35 @@ fun CalendarScreen(
                 modifier = Modifier
                     .fillMaxSize()
                     .padding(paddingValues)
-                    .padding(horizontal = if (isTablet) 32.dp else 16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                    .padding(horizontal = horizontalPadding),
+                verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                // Tarih kartı
-                Spacer(modifier = Modifier.padding(top = 10.dp))
-                DateCard(
-                    gregorianDate = viewModel.gregorianDate,
-                    ifcDateText = viewModel.ifcDateText
+                Spacer(modifier = Modifier.height(8.dp))
+
+                // Ay navigasyonu + tarih kartı
+                MonthNavigationBar(
+                    monthLabel = viewModel.viewedMonthLabel,
+                    onPrev = { viewModel.prevMonth() },
+                    onNext = { viewModel.nextMonth() },
+                    onToday = { viewModel.goToToday() },
+                    canGoToday = !viewModel.isViewingToday
                 )
 
-                // Takvim grid
+                when (headerStyle) {
+                    HeaderStyle.HERO_COMPACT -> HeroCompactHeader(
+                        ifcText = viewModel.ifcDateText,
+                        gregorianText = viewModel.gregorianDate
+                    )
+                    HeaderStyle.STACKED_MINIMAL -> StackedMinimalHeader(
+                        ifcText = viewModel.ifcDateText,
+                        gregorianText = viewModel.gregorianDate
+                    )
+                    HeaderStyle.PILL_CHIP -> PillChipHeader(
+                        ifcText = viewModel.ifcDateText,
+                        gregorianText = viewModel.gregorianDate
+                    )
+                }
+
                 LazyVerticalGrid(
                     columns = GridCells.Fixed(gridColumns),
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
@@ -119,7 +178,7 @@ fun CalendarScreen(
                     contentPadding = PaddingValues(vertical = 8.dp),
                     modifier = Modifier.fillMaxWidth(),
                     userScrollEnabled = true,
-                    flingBehavior = ScrollableDefaults.flingBehavior() // Performans iyileştirmesi
+                    flingBehavior = ScrollableDefaults.flingBehavior()
                 ) {
                     items(
                         items = viewModel.months,
@@ -137,8 +196,7 @@ fun CalendarScreen(
                                 monthDescription = viewModel.getMonthDescription(month),
                                 days = viewModel.getDaysForMonth(month),
                                 currentDay = viewModel.currentDay,
-                                isCurrentDay = isCurrentDayFunc,
-                                cardHeight = cardHeight
+                                isCurrentDay = isCurrentDayFunc
                             )
                         }
                     }
@@ -148,6 +206,66 @@ fun CalendarScreen(
     }
 }
 
+@Composable
+fun MonthNavigationBar(
+    monthLabel: String,
+    onPrev: () -> Unit,
+    onNext: () -> Unit,
+    onToday: () -> Unit,
+    canGoToday: Boolean
+) {
+    Surface(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(12.dp),
+        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.1f)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(horizontal = 8.dp, vertical = 4.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            IconButton(onClick = onPrev) {
+                Icon(
+                    Icons.Default.ChevronLeft,
+                    contentDescription = stringResource(R.string.previous_month),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                Text(
+                    text = monthLabel,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1
+                )
+                if (canGoToday) {
+                    AssistChip(
+                        onClick = onToday,
+                        label = {
+                            Text(
+                                stringResource(R.string.today),
+                                style = MaterialTheme.typography.labelSmall
+                            )
+                        }
+                    )
+                }
+            }
+            IconButton(onClick = onNext) {
+                Icon(
+                    Icons.Default.ChevronRight,
+                    contentDescription = stringResource(R.string.next_month),
+                    tint = MaterialTheme.colorScheme.primary
+                )
+            }
+        }
+    }
+}
 
 @Composable
 fun DateCard(
@@ -198,20 +316,19 @@ fun DateCard(
         }
     }
 }
+
 @Composable
 fun MonthCard(
     month: Int,
     monthName: String,
     isCurrentMonth: Boolean,
-    isSpecialDay: Boolean,
+    @Suppress("UNUSED_PARAMETER") isSpecialDay: Boolean,
     specialDayName: String,
     monthDescription: String,
     days: List<Int>,
     currentDay: Int,
-    isCurrentDay: (Int) -> Boolean,
-    cardHeight: Dp
+    isCurrentDay: (Int) -> Boolean
 ) {
-    // Cache calculations to improve performance
     val cachedDays = remember(days) { days }
     val colorScheme = MaterialTheme.colorScheme
     val containerColor = if (isCurrentMonth) {
@@ -219,25 +336,19 @@ fun MonthCard(
     } else {
         colorScheme.surface
     }
-
-    val textColor = if (isCurrentMonth) {
-        colorScheme.primary
-    } else {
-        colorScheme.primary
-    }
+    val textColor = colorScheme.primary
 
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(cardHeight),
-        border = BorderStroke(0.5.dp, if (isSystemInDarkTheme()) colorScheme.onPrimary else colorScheme.primary),
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = containerColor
+            .heightIn(min = 150.dp),
+        border = BorderStroke(
+            0.5.dp,
+            if (isSystemInDarkTheme()) colorScheme.onPrimary else colorScheme.primary
         ),
-        elevation = CardDefaults.cardElevation(
-            defaultElevation = 0.dp
-        )
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(containerColor = containerColor),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
     ) {
         Column(
             modifier = Modifier
@@ -250,8 +361,9 @@ fun MonthCard(
                 text = monthName,
                 style = MaterialTheme.typography.titleMedium,
                 color = textColor,
-                fontWeight = if (isCurrentMonth) FontWeight.Bold else FontWeight.Bold,
-                maxLines = 1
+                fontWeight = FontWeight.Bold,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis
             )
 
             if (month == 14) {
@@ -268,7 +380,8 @@ fun MonthCard(
                     style = MaterialTheme.typography.bodySmall,
                     color = colorScheme.onSurfaceVariant,
                     textAlign = TextAlign.Center,
-                    maxLines = 2
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
                 )
                 Spacer(modifier = Modifier.height(3.dp))
                 Text(
@@ -278,13 +391,13 @@ fun MonthCard(
                     fontWeight = FontWeight.Bold
                 )
             } else {
-                Spacer(modifier = Modifier.height(1.dp))
-                // Günler grid
+                Spacer(modifier = Modifier.height(2.dp))
                 DayGrid(
                     days = cachedDays,
                     currentDay = currentDay,
                     isCurrentDay = isCurrentDay,
-                    isCurrentMonth = isCurrentMonth
+                    isCurrentMonth = isCurrentMonth,
+                    monthName = monthName
                 )
             }
         }
@@ -294,69 +407,81 @@ fun MonthCard(
 @Composable
 fun DayGrid(
     days: List<Int>,
-    currentDay: Int,
+    @Suppress("UNUSED_PARAMETER") currentDay: Int,
     isCurrentDay: (Int) -> Boolean,
-    isCurrentMonth: Boolean
+    isCurrentMonth: Boolean,
+    monthName: String = ""
 ) {
     val rows = remember(days) { days.chunked(7) }
-    val colorScheme = MaterialTheme.colorScheme
 
     Column(
-        modifier = Modifier.fillMaxSize(),
-        verticalArrangement = Arrangement.SpaceEvenly
+        modifier = Modifier.fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(2.dp)
     ) {
         rows.forEach { row ->
             Row(
                 modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceEvenly
+                horizontalArrangement = Arrangement.spacedBy(2.dp),
+                verticalAlignment = Alignment.CenterVertically
             ) {
                 row.forEach { day ->
                     key(day) {
-                        DayChip(
-                            day = day,
-                            isSelected = isCurrentDay(day),
-                            isCurrentMonth = isCurrentMonth
-                        )
+                        Box(
+                            modifier = Modifier
+                                .weight(1f)
+                                .aspectRatio(1f),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            DayChip(
+                                day = day,
+                                isSelected = isCurrentDay(day),
+                                isCurrentMonth = isCurrentMonth,
+                                monthName = monthName
+                            )
+                        }
                     }
+                }
+                // Eksik günleri telafi etmek için (örn. 28 değilse)
+                repeat(7 - row.size) {
+                    Spacer(modifier = Modifier.weight(1f))
                 }
             }
         }
     }
 }
 
-
 @Composable
 fun DayChip(
     day: Int,
     isSelected: Boolean,
-    isCurrentMonth: Boolean
+    isCurrentMonth: Boolean,
+    monthName: String = ""
 ) {
     val colorScheme = MaterialTheme.colorScheme
     val backgroundColor = when {
         isSelected -> colorScheme.primary
-        //isCurrentMonth -> colorScheme.primary.copy(alpha = 0.2f)
         else -> Color.Transparent
     }
-
     val textColor = when {
-        isSelected and isCurrentMonth-> colorScheme.onPrimary
+        isSelected && isCurrentMonth -> colorScheme.onPrimary
         isCurrentMonth -> colorScheme.primary
-       // isCurrentMonth -> colorScheme.onSecondary
-        else -> Color.Black
+        else -> colorScheme.onSurface
+    }
+
+    val description = if (isSelected) {
+        stringResource(R.string.cd_day_today, day, monthName)
+    } else {
+        stringResource(R.string.cd_day, day, monthName)
     }
 
     Box(
         modifier = Modifier
-            .size(22.dp)
+            .fillMaxSize()
             .then(
-                if (isSelected || isCurrentMonth) {
-                    Modifier
-                        .clip(CircleShape)
-                        .background(backgroundColor)
-                } else {
-                    Modifier
-                }
-            ),
+                if (isSelected) Modifier.clip(CircleShape).background(backgroundColor)
+                else Modifier
+            )
+            .semantics { contentDescription = description },
         contentAlignment = Alignment.Center
     ) {
         Text(
@@ -365,23 +490,15 @@ fun DayChip(
                 fontSize = 12.sp,
                 fontWeight = if (isSelected) FontWeight.Bold else FontWeight.SemiBold
             ),
-            color = if (!isSelected and !isCurrentMonth) MaterialTheme.colorScheme.onSurface else textColor,
+            color = textColor,
             maxLines = 1
         )
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 320)
 @Composable
 private fun MainPreview() {
-    PreviewFixedCalendarTheme {
-        CalendarScreen()
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun CalendarScreenPreview() {
     PreviewFixedCalendarTheme {
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -390,21 +507,16 @@ private fun CalendarScreenPreview() {
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(16.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                    .padding(8.dp),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                DateCard(
-                    gregorianDate = "16 April 2024",
-                    ifcDateText = "22 April"
-                )
-
                 MonthCardPreview()
             }
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 360)
 @Composable
 private fun MonthCardPreview() {
     PreviewFixedCalendarTheme {
@@ -421,72 +533,31 @@ private fun MonthCardPreview() {
                 monthDescription = "January ayı, 28 günden oluşur.",
                 days = (1..28).toList(),
                 currentDay = 15,
-                isCurrentDay = { it == 15 },
-                cardHeight = 160.dp
+                isCurrentDay = { it == 15 }
             )
         }
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, widthDp = 200)
 @Composable
-private fun SpecialMonthCardPreview() {
+private fun MonthCardSmallPreview() {
     PreviewFixedCalendarTheme {
         Surface(
             modifier = Modifier.fillMaxWidth(),
             color = MaterialTheme.colorScheme.background
         ) {
             MonthCard(
-                month = 7,
-                monthName = "Sol",
-                isCurrentMonth = false,
-                isSpecialDay = true,
-                specialDayName = "Sol",
-                monthDescription = stringResource(R.string.sol_description),
-                days = (1..1).toList(),
-                currentDay = 0,
-                isCurrentDay = { false },
-                cardHeight = 160.dp
-            )
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun DayGridPreview() {
-    PreviewFixedCalendarTheme {
-        Surface(
-            modifier = Modifier.fillMaxWidth(),
-            color = MaterialTheme.colorScheme.background
-        ) {
-            DayGrid(
+                month = 1,
+                monthName = "January",
+                isCurrentMonth = true,
+                isSpecialDay = false,
+                specialDayName = "",
+                monthDescription = "",
                 days = (1..28).toList(),
                 currentDay = 15,
-                isCurrentDay = { it == 15 },
-                isCurrentMonth = true
+                isCurrentDay = { it == 15 }
             )
-        }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun DayChipPreview() {
-    PreviewFixedCalendarTheme {
-        Surface(
-            modifier = Modifier.fillMaxWidth(),
-            color = MaterialTheme.colorScheme.background
-        ) {
-            Row(
-                modifier = Modifier
-                    .padding(16.dp)
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                DayChip(day = 15, isSelected = true, isCurrentMonth = true)
-                DayChip(day = 16, isSelected = false, isCurrentMonth = true)
-            }
         }
     }
 }

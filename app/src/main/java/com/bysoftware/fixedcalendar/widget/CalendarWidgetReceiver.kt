@@ -8,7 +8,7 @@ import androidx.glance.appwidget.updateAll
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
-class CalendarWidgetReceiver : GlanceAppWidgetReceiver() {
+class     CalendarWidgetReceiver : GlanceAppWidgetReceiver() {
     override val glanceAppWidget = CalendarWidget()
     
     private val coroutineScope = MainScope()

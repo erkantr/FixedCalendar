@@ -46,4 +46,56 @@
     <string name="okay">OK</string>
     <string name="cancel">Anuluj</string>
 
+    <string name="converter">Konwerter</string>
+    <string name="share">Udostępnij</string>
+    <string name="share_today_text">Dziś jest %1$s w Międzynarodowym Stałym Kalendarzu (%2$s)</string>
+    <string name="previous_month">Poprzedni</string>
+    <string name="next_month">Następny</string>
+    <string name="today">Dziś</string>
+
+    <string name="cd_day">Dzień %1$d, %2$s</string>
+    <string name="cd_day_today">Dziś, dzień %1$d, %2$s</string>
+
+    <string name="gregorian_calendar_header">KALENDARZ GREGORIAŃSKI</string>
+    <string name="international_fixed_header">STAŁY MIĘDZYNARODOWY</string>
+    <string name="now_badge">TERAZ</string>
+    <string name="year_day_header">DZIEŃ ROKU</string>
+    <string name="global_holiday">Globalne święto</string>
+    <string name="leap_day_footer">Dzień przestępny dodawany co 4 lata po Sol 28</string>
+    <string name="dec_fixed">GRU STAŁY</string>
+    <string name="week_short">T</string>
+
+    <string name="modern_design">Nowoczesny wygląd</string>
+    <string name="modern_design_desc">Widok 14 kart</string>
+    <string name="dynamic_color">Dynamiczny kolor (Material You)</string>
+    <string name="dynamic_color_desc">Użyj kolorów systemu</string>
+    <string name="show_week_numbers">Pokaż numery tygodni</string>
+    <string name="show_week_numbers_desc">Wyświetla T1-T4 obok każdego tygodnia</string>
+    <string name="enable_notifications">Powiadomienia o dniach specjalnych</string>
+    <string name="enable_notifications_desc">Otrzymuj powiadomienia o Dniu Roku i Dniu Przestępnym</string>
+    <string name="header_style_title">Styl nagłówka</string>
+    <string name="header_style_desc">Wybierz, jak data jest wyświetlana u góry</string>
+    <string name="header_style_compact">Karta kompaktowa</string>
+    <string name="header_style_stacked">Minimalny stos</string>
+    <string name="header_style_pill">Chipsy pigułki</string>
+    <string name="gregorian_inline_label">Gregoriański: %1$s</string>
+    <string name="privacy_policy">Polityka prywatności</string>
+
+    <string name="convert_gregorian_to_ifc">Gregoriański → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregoriański</string>
+    <string name="select_date">Wybierz datę</string>
+    <string name="month_label">Miesiąc</string>
+    <string name="day_label">Dzień</string>
+    <string name="year_label">Rok</string>
+    <string name="convert">Konwertuj</string>
+    <string name="result">Wynik</string>
+    <string name="leap_day">Dzień Przestępny</string>
+    <string name="invalid_input">Nieprawidłowe dane</string>
+
+    <string name="notif_year_day_title">Dzień Roku!</string>
+    <string name="notif_year_day_text">Dziś jest specjalny ostatni dzień roku w IFC.</string>
+    <string name="notif_leap_day_title">Dzień Przestępny!</string>
+    <string name="notif_leap_day_text">Dziś jest Dzień Przestępny, występujący co 4 lata.</string>
+    <string name="notif_channel_name">Przypomnienia o dniach specjalnych</string>
+    <string name="notif_channel_desc">Powiadomienia o Dniu Roku i Dniu Przestępnym</string>
 </resources>

@@ -46,4 +46,56 @@
     <string name="okay">确定</string>
     <string name="cancel">取消</string>
 
+    <string name="converter">转换器</string>
+    <string name="share">分享</string>
+    <string name="share_today_text">今天在国际固定日历是 %1$s（%2$s）</string>
+    <string name="previous_month">上一个</string>
+    <string name="next_month">下一个</string>
+    <string name="today">今天</string>
+
+    <string name="cd_day">%2$s 第 %1$d 天</string>
+    <string name="cd_day_today">今天，%2$s 第 %1$d 天</string>
+
+    <string name="gregorian_calendar_header">公历</string>
+    <string name="international_fixed_header">国际固定历</string>
+    <string name="now_badge">现在</string>
+    <string name="year_day_header">年日</string>
+    <string name="global_holiday">全球节日</string>
+    <string name="leap_day_footer">索尔28日后每4年添加一个闰日</string>
+    <string name="dec_fixed">十二月固定</string>
+    <string name="week_short">周</string>
+
+    <string name="modern_design">现代设计</string>
+    <string name="modern_design_desc">14卡片视图</string>
+    <string name="dynamic_color">动态颜色 (Material You)</string>
+    <string name="dynamic_color_desc">使用系统壁纸颜色</string>
+    <string name="show_week_numbers">显示周数</string>
+    <string name="show_week_numbers_desc">在每周旁显示 周1-周4</string>
+    <string name="enable_notifications">特殊日期通知</string>
+    <string name="enable_notifications_desc">为年日和闰日接收通知</string>
+    <string name="header_style_title">顶部样式</string>
+    <string name="header_style_desc">选择日期在顶部的显示方式</string>
+    <string name="header_style_compact">紧凑卡片</string>
+    <string name="header_style_stacked">最小堆叠</string>
+    <string name="header_style_pill">胶囊标签</string>
+    <string name="gregorian_inline_label">公历: %1$s</string>
+    <string name="privacy_policy">隐私政策</string>
+
+    <string name="convert_gregorian_to_ifc">公历 → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → 公历</string>
+    <string name="select_date">选择日期</string>
+    <string name="month_label">月</string>
+    <string name="day_label">日</string>
+    <string name="year_label">年</string>
+    <string name="convert">转换</string>
+    <string name="result">结果</string>
+    <string name="leap_day">闰日</string>
+    <string name="invalid_input">无效输入</string>
+
+    <string name="notif_year_day_title">年日！</string>
+    <string name="notif_year_day_text">今天是IFC中一年的特殊最后一天。</string>
+    <string name="notif_leap_day_title">闰日！</string>
+    <string name="notif_leap_day_text">今天是每4年才出现一次的闰日。</string>
+    <string name="notif_channel_name">特殊日期提醒</string>
+    <string name="notif_channel_desc">年日和闰日通知</string>
 </resources>

@@ -45,4 +45,113 @@
     <string name="select_theme_color">Select Theme Color</string>
     <string name="okay">OK</string>
     <string name="cancel">Cancel</string>
+
+    <!-- Navigation / actions -->
+    <string name="converter">Converter</string>
+    <string name="share">Share</string>
+    <string name="share_today_text">Today is %1$s in the International Fixed Calendar (%2$s)</string>
+    <string name="previous_month">Previous</string>
+    <string name="next_month">Next</string>
+    <string name="today">Today</string>
+
+    <!-- Accessibility -->
+    <string name="cd_day">Day %1$d of %2$s</string>
+    <string name="cd_day_today">Today, day %1$d of %2$s</string>
+
+    <!-- Modern screen -->
+    <string name="gregorian_calendar_header">GREGORIAN CALENDAR</string>
+    <string name="international_fixed_header">INTERNATIONAL FIXED</string>
+    <string name="now_badge">NOW</string>
+    <string name="year_day_header">YEAR DAY</string>
+    <string name="global_holiday">Global Holiday</string>
+    <string name="leap_day_footer">Leap Day added every 4 years after Sol 28</string>
+    <string name="dec_fixed">DEC FIXED</string>
+    <string name="week_short">W</string>
+
+    <!-- Settings -->
+    <string name="modern_design">Modern Design</string>
+    <string name="modern_design_desc">14 card view</string>
+    <string name="dynamic_color">Dynamic Color (Material You)</string>
+    <string name="dynamic_color_desc">Use system wallpaper colors</string>
+    <string name="show_week_numbers">Show Week Numbers</string>
+    <string name="show_week_numbers_desc">Display W1-W4 next to each week</string>
+    <string name="enable_notifications">Special Day Notifications</string>
+    <string name="enable_notifications_desc">Get notified for Year Day and Leap Day</string>
+    <string name="header_style_title">Header Style</string>
+    <string name="header_style_desc">Choose how the date is displayed at the top</string>
+    <string name="header_style_compact">Compact Card</string>
+    <string name="header_style_compact_desc">IFC and Gregorian dates side by side, no card background</string>
+    <string name="header_style_stacked">Stacked Minimal</string>
+    <string name="header_style_stacked_desc">Large IFC date stacked above Gregorian, minimal layout</string>
+    <string name="header_style_pill">Pill Chips</string>
+    <string name="header_style_pill_desc">Two pill-shaped chips for IFC and Gregorian dates</string>
+    <string name="gregorian_inline_label">Gregorian: %1$s</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <!-- Widget styles -->
+    <string name="widget_style_title">Widget Style</string>
+    <string name="widget_style_desc">Choose how the home screen widget looks</string>
+    <string name="widget_style_text_compact">Text · Compact Card</string>
+    <string name="widget_style_text_compact_desc">IFC and Gregorian dates side by side, transparent background</string>
+    <string name="widget_style_text_stacked">Text · Stacked Minimal</string>
+    <string name="widget_style_text_stacked_desc">Large IFC date stacked above Gregorian, transparent background</string>
+    <string name="widget_style_text_pill">Text · Pill Chips</string>
+    <string name="widget_style_text_pill_desc">Two pill-shaped chips for IFC and Gregorian dates</string>
+    <string name="widget_style_grid_classic">Calendar · Monthly Grid</string>
+    <string name="widget_style_grid_classic_desc">Full month view with theme-colored selected day (default)</string>
+
+    <!-- Settings categories -->
+    <string name="settings_theme_title">Theme &amp; Color</string>
+    <string name="settings_theme_desc">Dark mode, dynamic color, custom theme and more</string>
+    <string name="settings_widget_title">Widget Settings</string>
+    <string name="settings_widget_desc">Widget style and theme settings for the home screen widget</string>
+    <string name="dark_mode_desc">Use a dark color scheme throughout the app</string>
+    <string name="special_theme_desc">Use a custom primary color of your choice</string>
+
+    <!-- Widget theme -->
+    <string name="widget_use_custom_theme">Custom Widget Theme</string>
+    <string name="widget_use_custom_theme_desc">Use independent theme settings for the widget. When off, the widget follows the app theme.</string>
+    <string name="widget_follows_app_theme_info">The widget is using the app theme. Enable the toggle above to override.</string>
+    <string name="widget_dark_mode">Widget Dark Mode</string>
+    <string name="widget_dark_mode_desc">Use a dark color scheme for the widget</string>
+    <string name="widget_dynamic_color">Widget Dynamic Color (Material You)</string>
+    <string name="widget_dynamic_color_desc">Tint the widget using system wallpaper colors</string>
+    <string name="widget_custom_color">Widget Custom Color</string>
+    <string name="widget_custom_color_desc">Pick a primary color for the widget</string>
+
+    <!-- Onboarding -->
+    <string name="onb_skip">Skip</string>
+    <string name="onb_back">Back</string>
+    <string name="onb_next">Next</string>
+    <string name="onb_get_started">Get Started</string>
+    <string name="onb_welcome_title">Welcome to Fixed Calendar</string>
+    <string name="onb_welcome_desc">A modern way to view dates using the International Fixed Calendar — 13 equal months of 28 days each.</string>
+    <string name="onb_modern_title">Modern or Classic Design</string>
+    <string name="onb_modern_desc">Choose between a modern card-based view or a classic grid. You can switch any time from Settings.</string>
+    <string name="onb_header_title">Personalize the Header</string>
+    <string name="onb_header_desc">Pick from three header styles for displaying today\'s date: Compact, Stacked Minimal or Pill Chips.</string>
+    <string name="onb_widget_title">Home Screen Widgets</string>
+    <string name="onb_widget_desc">Add a widget for quick access. Choose between text-only variants or a full month grid — all theme-aware.</string>
+    <string name="onb_extras_title">More Features</string>
+    <string name="onb_extras_desc">Week numbers, special day notifications, dark mode, dynamic color and 11 languages — all customizable in Settings.</string>
+
+    <!-- Converter -->
+    <string name="convert_gregorian_to_ifc">Gregorian → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregorian</string>
+    <string name="select_date">Select Date</string>
+    <string name="month_label">Month</string>
+    <string name="day_label">Day</string>
+    <string name="year_label">Year</string>
+    <string name="convert">Convert</string>
+    <string name="result">Result</string>
+    <string name="leap_day">Leap Day</string>
+    <string name="invalid_input">Invalid input</string>
+
+    <!-- Notifications -->
+    <string name="notif_year_day_title">Year Day!</string>
+    <string name="notif_year_day_text">Today is the special last day of the year in the IFC.</string>
+    <string name="notif_leap_day_title">Leap Day!</string>
+    <string name="notif_leap_day_text">Today is the once-in-4-years Leap Day.</string>
+    <string name="notif_channel_name">Special Day Reminders</string>
+    <string name="notif_channel_desc">Notifications for Year Day and Leap Day</string>
 </resources>

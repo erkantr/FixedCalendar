@@ -1,14 +1,20 @@
 package com.bysoftware.fixedcalendar.ui.screens
 
+import android.content.Intent
+import android.net.Uri
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.PrivacyTip
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -76,6 +82,51 @@ fun InfoScreen(
                 title = stringResource(R.string.history_title),
                 content = stringResource(R.string.history_desc)
             )
+
+            PrivacyPolicyRow()
+        }
+    }
+}
+
+@Composable
+private fun PrivacyPolicyRow() {
+    val context = LocalContext.current
+    val url = "https://bysoftware.github.io/fixedcalendar-privacy/"
+    ElevatedCard(
+        modifier = Modifier
+            .fillMaxWidth()
+            .clickable {
+                runCatching {
+                    context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                }
+            },
+        shape = RoundedCornerShape(16.dp)
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(16.dp),
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.PrivacyTip,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.primary
+            )
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = stringResource(R.string.privacy_policy),
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.primary,
+                    fontWeight = FontWeight.SemiBold
+                )
+                Text(
+                    text = url,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f)
+                )
+            }
         }
     }
 }

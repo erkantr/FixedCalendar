@@ -31,14 +31,14 @@ import androidx.compose.ui.unit.sp
  */
 
 @Preview(
-    name = "Widget Preview - Default",
-    widthDp = 200,
-    heightDp = 220,
+    name = "Widget - Small (140x140)",
+    widthDp = 140,
+    heightDp = 140,
     showBackground = true,
     backgroundColor = 0xFFF5F5F5
 )
 @Composable
-fun WidgetPreviewDefault() {
+fun WidgetPreviewSmall() {
     WidgetPreviewModern(
         currentDay = 18,
         monthName = "January",
@@ -47,14 +47,14 @@ fun WidgetPreviewDefault() {
 }
 
 @Preview(
-    name = "Widget Preview - Red Theme",
-    widthDp = 200,
-    heightDp = 220,
+    name = "Widget - Medium (220x180)",
+    widthDp = 220,
+    heightDp = 180,
     showBackground = true,
     backgroundColor = 0xFFF5F5F5
 )
 @Composable
-fun WidgetPreviewCompact() {
+fun WidgetPreviewMedium() {
     WidgetPreviewModern(
         currentDay = 7,
         monthName = "February",
@@ -64,9 +64,9 @@ fun WidgetPreviewCompact() {
 }
 
 @Preview(
-    name = "Widget Preview - Green Theme",
-    widthDp = 200,
-    heightDp = 220,
+    name = "Widget - Large (250x250)",
+    widthDp = 250,
+    heightDp = 250,
     showBackground = true,
     backgroundColor = 0xFFF5F5F5
 )
@@ -168,3 +168,4 @@ fun PreviewDayCellModern(
         )
     }
 }
+

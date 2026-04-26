@@ -45,4 +45,57 @@
     <string name="cancel">Annulla</string>
     <string name="year_day_description">Il Giorno dell\'Anno è l\'ultimo giorno dell\'anno.</string>
     <string name="month_default_description">mese è composto da 28 giorni.</string>
+
+    <string name="converter">Convertitore</string>
+    <string name="share">Condividi</string>
+    <string name="share_today_text">Oggi è %1$s nel Calendario Fisso Internazionale (%2$s)</string>
+    <string name="previous_month">Precedente</string>
+    <string name="next_month">Successivo</string>
+    <string name="today">Oggi</string>
+
+    <string name="cd_day">Giorno %1$d di %2$s</string>
+    <string name="cd_day_today">Oggi, giorno %1$d di %2$s</string>
+
+    <string name="gregorian_calendar_header">CALENDARIO GREGORIANO</string>
+    <string name="international_fixed_header">FISSO INTERNAZIONALE</string>
+    <string name="now_badge">ORA</string>
+    <string name="year_day_header">GIORNO DELL\'ANNO</string>
+    <string name="global_holiday">Festività globale</string>
+    <string name="leap_day_footer">Giorno Bisestile aggiunto ogni 4 anni dopo Sol 28</string>
+    <string name="dec_fixed">DIC FISSO</string>
+    <string name="week_short">S</string>
+
+    <string name="modern_design">Design Moderno</string>
+    <string name="modern_design_desc">Vista a 14 carte</string>
+    <string name="dynamic_color">Colore Dinamico (Material You)</string>
+    <string name="dynamic_color_desc">Usa i colori del sistema</string>
+    <string name="show_week_numbers">Mostra numeri di settimana</string>
+    <string name="show_week_numbers_desc">Mostra S1-S4 accanto a ogni settimana</string>
+    <string name="enable_notifications">Notifiche giorni speciali</string>
+    <string name="enable_notifications_desc">Ricevi notifiche per Giorno dell\'Anno e Giorno Bisestile</string>
+    <string name="header_style_title">Stile intestazione</string>
+    <string name="header_style_desc">Scegli come viene mostrata la data in alto</string>
+    <string name="header_style_compact">Scheda compatta</string>
+    <string name="header_style_stacked">Minimale impilato</string>
+    <string name="header_style_pill">Chip a pillola</string>
+    <string name="gregorian_inline_label">Gregoriano: %1$s</string>
+    <string name="privacy_policy">Informativa sulla privacy</string>
+
+    <string name="convert_gregorian_to_ifc">Gregoriano → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregoriano</string>
+    <string name="select_date">Seleziona data</string>
+    <string name="month_label">Mese</string>
+    <string name="day_label">Giorno</string>
+    <string name="year_label">Anno</string>
+    <string name="convert">Converti</string>
+    <string name="result">Risultato</string>
+    <string name="leap_day">Giorno Bisestile</string>
+    <string name="invalid_input">Input non valido</string>
+
+    <string name="notif_year_day_title">Giorno dell\'Anno!</string>
+    <string name="notif_year_day_text">Oggi è l\'ultimo giorno speciale dell\'anno nell\'IFC.</string>
+    <string name="notif_leap_day_title">Giorno Bisestile!</string>
+    <string name="notif_leap_day_text">Oggi è il Giorno Bisestile, che si verifica ogni 4 anni.</string>
+    <string name="notif_channel_name">Promemoria giorni speciali</string>
+    <string name="notif_channel_desc">Notifiche per Giorno dell\'Anno e Giorno Bisestile</string>
 </resources>

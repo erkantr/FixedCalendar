@@ -46,4 +46,56 @@
     <string name="okay">Okay</string>
     <string name="cancel">Cancel</string>
 
+    <string name="converter">Converter</string>
+    <string name="share">Share</string>
+    <string name="share_today_text">Today is %1$s in the International Fixed Calendar (%2$s)</string>
+    <string name="previous_month">Previous</string>
+    <string name="next_month">Next</string>
+    <string name="today">Today</string>
+
+    <string name="cd_day">Day %1$d of %2$s</string>
+    <string name="cd_day_today">Today, day %1$d of %2$s</string>
+
+    <string name="gregorian_calendar_header">GREGORIAN CALENDAR</string>
+    <string name="international_fixed_header">INTERNATIONAL FIXED</string>
+    <string name="now_badge">NOW</string>
+    <string name="year_day_header">YEAR DAY</string>
+    <string name="global_holiday">Global Holiday</string>
+    <string name="leap_day_footer">Leap Day added every 4 years after Sol 28</string>
+    <string name="dec_fixed">DEC FIXED</string>
+    <string name="week_short">W</string>
+
+    <string name="modern_design">Modern Design</string>
+    <string name="modern_design_desc">14 card view</string>
+    <string name="dynamic_color">Dynamic Color (Material You)</string>
+    <string name="dynamic_color_desc">Use system wallpaper colors</string>
+    <string name="show_week_numbers">Show Week Numbers</string>
+    <string name="show_week_numbers_desc">Display W1-W4 next to each week</string>
+    <string name="enable_notifications">Special Day Notifications</string>
+    <string name="enable_notifications_desc">Get notified for Year Day and Leap Day</string>
+    <string name="header_style_title">Header Style</string>
+    <string name="header_style_desc">Choose how the date is displayed at the top</string>
+    <string name="header_style_compact">Compact Card</string>
+    <string name="header_style_stacked">Stacked Minimal</string>
+    <string name="header_style_pill">Pill Chips</string>
+    <string name="gregorian_inline_label">Gregorian: %1$s</string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="convert_gregorian_to_ifc">Gregorian → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregorian</string>
+    <string name="select_date">Select Date</string>
+    <string name="month_label">Month</string>
+    <string name="day_label">Day</string>
+    <string name="year_label">Year</string>
+    <string name="convert">Convert</string>
+    <string name="result">Result</string>
+    <string name="leap_day">Leap Day</string>
+    <string name="invalid_input">Invalid input</string>
+
+    <string name="notif_year_day_title">Year Day!</string>
+    <string name="notif_year_day_text">Today is the special last day of the year in the IFC.</string>
+    <string name="notif_leap_day_title">Leap Day!</string>
+    <string name="notif_leap_day_text">Today is the once-in-4-years Leap Day.</string>
+    <string name="notif_channel_name">Special Day Reminders</string>
+    <string name="notif_channel_desc">Notifications for Year Day and Leap Day</string>
 </resources>

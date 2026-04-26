@@ -46,4 +46,56 @@
     <string name="okay">موافق</string>
     <string name="cancel">إلغاء</string>
 
+    <string name="converter">المحول</string>
+    <string name="share">مشاركة</string>
+    <string name="share_today_text">اليوم هو %1$s في التقويم الثابت الدولي (%2$s)</string>
+    <string name="previous_month">السابق</string>
+    <string name="next_month">التالي</string>
+    <string name="today">اليوم</string>
+
+    <string name="cd_day">اليوم %1$d من %2$s</string>
+    <string name="cd_day_today">اليوم، اليوم %1$d من %2$s</string>
+
+    <string name="gregorian_calendar_header">التقويم الغريغوري</string>
+    <string name="international_fixed_header">الثابت الدولي</string>
+    <string name="now_badge">الآن</string>
+    <string name="year_day_header">يوم السنة</string>
+    <string name="global_holiday">عطلة عالمية</string>
+    <string name="leap_day_footer">يضاف يوم كبيس كل 4 سنوات بعد سول 28</string>
+    <string name="dec_fixed">ك. ثابت</string>
+    <string name="week_short">أ</string>
+
+    <string name="modern_design">التصميم الحديث</string>
+    <string name="modern_design_desc">عرض 14 بطاقة</string>
+    <string name="dynamic_color">اللون الديناميكي (Material You)</string>
+    <string name="dynamic_color_desc">استخدم ألوان النظام</string>
+    <string name="show_week_numbers">إظهار أرقام الأسابيع</string>
+    <string name="show_week_numbers_desc">عرض أ1-أ4 بجانب كل أسبوع</string>
+    <string name="enable_notifications">إشعارات الأيام الخاصة</string>
+    <string name="enable_notifications_desc">احصل على إشعارات ليوم السنة واليوم الكبيس</string>
+    <string name="header_style_title">نمط الرأس</string>
+    <string name="header_style_desc">اختر طريقة عرض التاريخ في الأعلى</string>
+    <string name="header_style_compact">بطاقة مدمجة</string>
+    <string name="header_style_stacked">تكديس مبسّط</string>
+    <string name="header_style_pill">شرائح حبوب</string>
+    <string name="gregorian_inline_label">الميلادي: %1$s</string>
+    <string name="privacy_policy">سياسة الخصوصية</string>
+
+    <string name="convert_gregorian_to_ifc">غريغوري → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → غريغوري</string>
+    <string name="select_date">اختر التاريخ</string>
+    <string name="month_label">الشهر</string>
+    <string name="day_label">اليوم</string>
+    <string name="year_label">السنة</string>
+    <string name="convert">حول</string>
+    <string name="result">النتيجة</string>
+    <string name="leap_day">يوم كبيس</string>
+    <string name="invalid_input">إدخال غير صالح</string>
+
+    <string name="notif_year_day_title">يوم السنة!</string>
+    <string name="notif_year_day_text">اليوم هو آخر يوم خاص من السنة في IFC.</string>
+    <string name="notif_leap_day_title">اليوم الكبيس!</string>
+    <string name="notif_leap_day_text">اليوم هو اليوم الكبيس الذي يحدث كل 4 سنوات.</string>
+    <string name="notif_channel_name">تذكيرات الأيام الخاصة</string>
+    <string name="notif_channel_desc">إشعارات يوم السنة واليوم الكبيس</string>
 </resources>

@@ -46,4 +46,56 @@
     <string name="okay">ОК</string>
     <string name="cancel">Отмена</string>
 
+    <string name="converter">Конвертер</string>
+    <string name="share">Поделиться</string>
+    <string name="share_today_text">Сегодня %1$s в Международном фиксированном календаре (%2$s)</string>
+    <string name="previous_month">Назад</string>
+    <string name="next_month">Вперёд</string>
+    <string name="today">Сегодня</string>
+
+    <string name="cd_day">День %1$d месяца %2$s</string>
+    <string name="cd_day_today">Сегодня, день %1$d месяца %2$s</string>
+
+    <string name="gregorian_calendar_header">ГРИГОРИАНСКИЙ КАЛЕНДАРЬ</string>
+    <string name="international_fixed_header">МЕЖДУНАРОДНЫЙ ФИКСИР.</string>
+    <string name="now_badge">СЕЙЧАС</string>
+    <string name="year_day_header">ДЕНЬ ГОДА</string>
+    <string name="global_holiday">Глобальный праздник</string>
+    <string name="leap_day_footer">Високосный день добавляется каждые 4 года после Соль 28</string>
+    <string name="dec_fixed">ДЕК ФИКС</string>
+    <string name="week_short">Н</string>
+
+    <string name="modern_design">Современный дизайн</string>
+    <string name="modern_design_desc">Вид с 14 карточками</string>
+    <string name="dynamic_color">Динамический цвет (Material You)</string>
+    <string name="dynamic_color_desc">Использовать цвета системы</string>
+    <string name="show_week_numbers">Показывать номера недель</string>
+    <string name="show_week_numbers_desc">Показывать Н1-Н4 рядом с каждой неделей</string>
+    <string name="enable_notifications">Уведомления об особых днях</string>
+    <string name="enable_notifications_desc">Получать уведомления о Дне года и Високосном дне</string>
+    <string name="header_style_title">Стиль заголовка</string>
+    <string name="header_style_desc">Выберите, как отображается дата вверху</string>
+    <string name="header_style_compact">Компактная карточка</string>
+    <string name="header_style_stacked">Минимальный стек</string>
+    <string name="header_style_pill">Pill-чипы</string>
+    <string name="gregorian_inline_label">Григорианский: %1$s</string>
+    <string name="privacy_policy">Политика конфиденциальности</string>
+
+    <string name="convert_gregorian_to_ifc">Григорианский → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Григорианский</string>
+    <string name="select_date">Выбрать дату</string>
+    <string name="month_label">Месяц</string>
+    <string name="day_label">День</string>
+    <string name="year_label">Год</string>
+    <string name="convert">Конвертировать</string>
+    <string name="result">Результат</string>
+    <string name="leap_day">Високосный день</string>
+    <string name="invalid_input">Неверные данные</string>
+
+    <string name="notif_year_day_title">День Года!</string>
+    <string name="notif_year_day_text">Сегодня особенный последний день года в IFC.</string>
+    <string name="notif_leap_day_title">Високосный День!</string>
+    <string name="notif_leap_day_text">Сегодня Високосный день, выпадающий раз в 4 года.</string>
+    <string name="notif_channel_name">Напоминания об особых днях</string>
+    <string name="notif_channel_desc">Уведомления о Дне года и Високосном дне</string>
 </resources>

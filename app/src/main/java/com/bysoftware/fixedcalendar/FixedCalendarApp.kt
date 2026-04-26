@@ -4,7 +4,13 @@ import android.app.Application
 import android.content.Context
 import android.preference.PreferenceManager
 import com.bysoftware.fixedcalendar.data.ThemeDataStore
+import com.bysoftware.fixedcalendar.notifications.NotificationScheduler
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import java.util.Locale
 import javax.inject.Inject
 
@@ -50,6 +56,21 @@ class FixedCalendarApp : Application() {
             
             // LocaleHelper ile dili uygula
             LocaleHelper.setLocale(this, deviceLanguageCode)
+        }
+
+        // Bildirim kanalını oluştur
+        NotificationScheduler.ensureChannel(this)
+
+        // Kullanıcı bildirimleri açtıysa zamanla
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            CoroutineScope(SupervisorJob() + Dispatchers.IO).launch {
+                try {
+                    if (themeDataStore.enableNotifications.first()) {
+                        NotificationScheduler.scheduleAll(this@FixedCalendarApp)
+                    }
+                } catch (_: Throwable) {
+                }
+            }
         }
     }
     

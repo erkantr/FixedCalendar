@@ -5,6 +5,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.gms.permission.AD_ID"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".FixedCalendarApp"
@@ -40,6 +42,14 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/calendar_widget_info"/>
+        </receiver>
+
+        <receiver
+            android:name=".notifications.NotificationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.bysoftware.fixedcalendar.ACTION_NOTIFY"/>
+            </intent-filter>
         </receiver>
 
 

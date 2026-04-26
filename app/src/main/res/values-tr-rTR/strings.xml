@@ -46,4 +46,106 @@
     <string name="okay">Tamam</string>
     <string name="cancel">İptal</string>
 
+    <string name="converter">Dönüştürücü</string>
+    <string name="share">Paylaş</string>
+    <string name="share_today_text">Bugün Sabit Takvim\'de %1$s (%2$s)</string>
+    <string name="previous_month">Önceki</string>
+    <string name="next_month">Sonraki</string>
+    <string name="today">Bugün</string>
+
+    <string name="cd_day">%2$s ayının %1$d. günü</string>
+    <string name="cd_day_today">Bugün, %2$s ayının %1$d. günü</string>
+
+    <string name="gregorian_calendar_header">GREGORYEN TAKVİM</string>
+    <string name="international_fixed_header">ULUSLARARASI SABİT</string>
+    <string name="now_badge">ŞİMDİ</string>
+    <string name="year_day_header">YIL GÜNÜ</string>
+    <string name="global_holiday">Küresel Tatil</string>
+    <string name="leap_day_footer">Sol 28\'den sonra her 4 yılda bir Artık Gün eklenir</string>
+    <string name="dec_fixed">SAB ARA</string>
+    <string name="week_short">H</string>
+
+    <string name="modern_design">Modern Tasarım</string>
+    <string name="modern_design_desc">14 kartlı görünüm</string>
+    <string name="dynamic_color">Dinamik Renk (Material You)</string>
+    <string name="dynamic_color_desc">Sistem duvar kâğıdı renklerini kullan</string>
+    <string name="show_week_numbers">Hafta Numaralarını Göster</string>
+    <string name="show_week_numbers_desc">Her haftanın yanında H1-H4 göster</string>
+    <string name="enable_notifications">Özel Gün Bildirimleri</string>
+    <string name="enable_notifications_desc">Yıl Günü ve Artık Gün için bildirim al</string>
+    <string name="header_style_title">Üst Başlık Stili</string>
+    <string name="header_style_desc">Üstteki tarih gösterim biçimini seç</string>
+    <string name="header_style_compact">Kompakt Kart</string>
+    <string name="header_style_compact_desc">IFC ve Gregoryen tarih yan yana, kart arka planı yok</string>
+    <string name="header_style_stacked">Minimal Üst Üste</string>
+    <string name="header_style_stacked_desc">Büyük IFC tarihi üstte, Gregoryen altta — minimal düzen</string>
+    <string name="header_style_pill">Pill Çipler</string>
+    <string name="header_style_pill_desc">IFC ve Gregoryen tarih için iki pill çip</string>
+    <string name="gregorian_inline_label">Gregoryen: %1$s</string>
+    <string name="privacy_policy">Gizlilik Politikası</string>
+
+    <!-- Widget styles -->
+    <string name="widget_style_title">Widget Stili</string>
+    <string name="widget_style_desc">Ana ekran widget\'ının görünümünü seçin</string>
+    <string name="widget_style_text_compact">Yazı · Kompakt Kart</string>
+    <string name="widget_style_text_compact_desc">IFC ve Gregoryen yan yana, şeffaf arka plan</string>
+    <string name="widget_style_text_stacked">Yazı · Minimal Üst Üste</string>
+    <string name="widget_style_text_stacked_desc">Büyük IFC tarihi, altında Gregoryen, şeffaf arka plan</string>
+    <string name="widget_style_text_pill">Yazı · Pill Çipler</string>
+    <string name="widget_style_text_pill_desc">IFC ve Gregoryen tarih için iki pill çip</string>
+    <string name="widget_style_grid_classic">Takvim · Aylık Izgara</string>
+    <string name="widget_style_grid_classic_desc">Tam ay görünümü, tema renkli seçili gün (varsayılan)</string>
+
+    <!-- Settings categories -->
+    <string name="settings_theme_title">Tema ve Renk</string>
+    <string name="settings_theme_desc">Koyu mod, dinamik renk, özel tema ve daha fazlası</string>
+    <string name="settings_widget_title">Widget Ayarları</string>
+    <string name="settings_widget_desc">Ana ekran widget\'ı için stil ve tema ayarları</string>
+    <string name="dark_mode_desc">Uygulama genelinde koyu renk şemasını kullan</string>
+    <string name="special_theme_desc">Tema rengi olarak seçtiğin özel rengi kullan</string>
+
+    <!-- Widget theme -->
+    <string name="widget_use_custom_theme">Widget için Özel Tema</string>
+    <string name="widget_use_custom_theme_desc">Widget için bağımsız tema ayarlarını kullan. Kapalıyken widget uygulama temasını izler.</string>
+    <string name="widget_follows_app_theme_info">Widget şu anda uygulama temasını kullanıyor. Geçersiz kılmak için yukarıdaki anahtarı aç.</string>
+    <string name="widget_dark_mode">Widget Koyu Mod</string>
+    <string name="widget_dark_mode_desc">Widget için koyu renk şeması kullan</string>
+    <string name="widget_dynamic_color">Widget Dinamik Renk (Material You)</string>
+    <string name="widget_dynamic_color_desc">Widget\'ı sistem duvar kağıdı renkleriyle boya</string>
+    <string name="widget_custom_color">Widget Özel Renk</string>
+    <string name="widget_custom_color_desc">Widget için özel bir tema rengi seç</string>
+
+    <!-- Onboarding -->
+    <string name="onb_skip">Geç</string>
+    <string name="onb_back">Geri</string>
+    <string name="onb_next">İleri</string>
+    <string name="onb_get_started">Başla</string>
+    <string name="onb_welcome_title">Fixed Calendar\'a Hoş Geldiniz</string>
+    <string name="onb_welcome_desc">Uluslararası Sabit Takvim ile tarihlere yeni bir bakış — her ay 28 gün, toplam 13 eşit ay.</string>
+    <string name="onb_modern_title">Modern veya Klasik Tasarım</string>
+    <string name="onb_modern_desc">Modern kart tabanlı görünüm ile klasik ızgara arasında istediğiniz zaman Ayarlar\'dan geçiş yapın.</string>
+    <string name="onb_header_title">Üst Başlığı Kişiselleştirin</string>
+    <string name="onb_header_desc">Bugünün tarihini göstermek için 3 stil arasından seçin: Kompakt, Minimal Üst Üste veya Pill Çipler.</string>
+    <string name="onb_widget_title">Ana Ekran Widget\'ları</string>
+    <string name="onb_widget_desc">Hızlı erişim için widget ekleyin. Sadece yazılı varyantlar veya tam aylık ızgara — hepsi temayla uyumlu.</string>
+    <string name="onb_extras_title">Daha Fazla Özellik</string>
+    <string name="onb_extras_desc">Hafta numaraları, özel gün bildirimleri, koyu mod, dinamik renk ve 11 dil — hepsi Ayarlar\'dan özelleştirilebilir.</string>
+
+    <string name="convert_gregorian_to_ifc">Gregoryen → IFC</string>
+    <string name="convert_ifc_to_gregorian">IFC → Gregoryen</string>
+    <string name="select_date">Tarih Seç</string>
+    <string name="month_label">Ay</string>
+    <string name="day_label">Gün</string>
+    <string name="year_label">Yıl</string>
+    <string name="convert">Dönüştür</string>
+    <string name="result">Sonuç</string>
+    <string name="leap_day">Artık Gün</string>
+    <string name="invalid_input">Geçersiz giriş</string>
+
+    <string name="notif_year_day_title">Yıl Günü!</string>
+    <string name="notif_year_day_text">Bugün IFC takviminde yılın özel son günü.</string>
+    <string name="notif_leap_day_title">Artık Gün!</string>
+    <string name="notif_leap_day_text">Bugün 4 yılda bir gelen Artık Gün.</string>
+    <string name="notif_channel_name">Özel Gün Hatırlatıcıları</string>
+    <string name="notif_channel_desc">Yıl Günü ve Artık Gün bildirimleri</string>
 </resources>
